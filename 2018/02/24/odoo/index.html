@@ -105,7 +105,7 @@
 				    
 				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(2)</small></a></li>
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
 				    
@@ -143,7 +143,7 @@
 				    
 				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
 				    
-				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(2)</small></a></li>
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
@@ -159,7 +159,7 @@
 				    
 				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
 				    
-				    <li><a href="/tags/training/" class="animsition-link">training<small>(2)</small></a></li>
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
 				    
@@ -282,11 +282,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org46ec803">1. Installing odoo CE11 on Ubuntu16.04</a></li>
-<li><a href="#orgc7ca706">2. Configuration</a></li>
-<li><a href="#orgebcd1b9">3. Modules/Addon</a></li>
-<li><a href="#orgde85d94">4. API</a></li>
-<li><a href="#org230a3de">5. Issues</a></li>
+<li><a href="#org13e0a33">1. Installing odoo CE11 on Ubuntu16.04</a></li>
+<li><a href="#org59afe48">2. Configuration</a></li>
+<li><a href="#org4b60c94">3. Modules/Addon</a></li>
+<li><a href="#orgecfb3ad">4. API</a></li>
+<li><a href="#org785056a">5. Issues</a></li>
 </ul>
 </div>
 </div>
@@ -295,25 +295,25 @@
 <p>
 odoo<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> is a suite of web based open source apps of Enterprise Resource Planning(ERP).
 </p>
-<div id="outline-container-org46ec803" class="outline-2">
-<h2 id="org46ec803"><span class="section-number-2">1</span> Installing odoo CE11 on Ubuntu16.04</h2>
+<div id="outline-container-org13e0a33" class="outline-2">
+<h2 id="org13e0a33"><span class="section-number-2">1</span> Installing odoo CE11 on Ubuntu16.04</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org1136aa0" class="outline-3">
-<h3 id="org1136aa0"><span class="section-number-3">1.1</span> Prepare</h3>
+<div id="outline-container-org6bb9957" class="outline-3">
+<h3 id="org6bb9957"><span class="section-number-3">1.1</span> Prepare</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> sudo adduser -m -g sudo <span class="operator">-s</span> /bin/bash odoo</span><br><span class="line"> sudo passwd odoo</span><br><span class="line"> sudo vi /etc/sudoers</span><br><span class="line"> <span class="comment">### Add odoo to sudoer group.</span></span><br><span class="line"> <span class="comment">### Then change root to odoo.</span></span><br><span class="line"> su odoo</span><br><span class="line"></span><br><span class="line"> sudo apt-get update &amp;&amp; sudo apt-get upgrade</span><br><span class="line"> sudo apt-get install -y wget git zsh postgresql npm python3-pip</span><br><span class="line"> sudo ln <span class="operator">-s</span> /usr/bin/nodejs /usr/bin/node</span><br><span class="line"> sudo npm install -g less</span><br><span class="line"> sudo pip3 install Babel decorator docutils ebaysdk feedparser gevent greenlet html2text Jinja2 lxml Mako MarkupSafe mock num2words ofxparse passlib Pillow psutil psycogreen psycopg2 pydot pyparsing PyPDF2 pyserial python-dateutil python-openid pytz pyusb PyYAML qrcode reportlab requests six suds-jurko vatnumber vobject Werkzeug XlsxWriter xlwt xlrd</span><br><span class="line"></span><br><span class="line">wget http://download.gna.org/wkhtmltopdf/<span class="number">0.12</span>/<span class="number">0.12</span>.<span class="number">3</span>/wkhtmltox-<span class="number">0.12</span>.<span class="number">3</span>_linux-generic-amd64.tar.xz /opt/</span><br><span class="line">tar -xJf wkhtmlox-<span class="number">0.12</span>.<span class="number">3</span>_linux-generic-amd64.tar.xz</span><br><span class="line">sudo chown root:root /opt/wkhtmltopdf</span><br><span class="line">sudo chmod +x /opt/wkhtmltopdf</span><br><span class="line">sudo ln <span class="operator">-s</span> /opt/wkhtmltopdf /usr/<span class="built_in">local</span>/bin/wkhtmltopdf</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org60b4e0e" class="outline-3">
-<h3 id="org60b4e0e"><span class="section-number-3">1.2</span> Odoo</h3>
+<div id="outline-container-orgbf72aa7" class="outline-3">
+<h3 id="orgbf72aa7"><span class="section-number-3">1.2</span> Odoo</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org64ab50a" class="outline-4">
-<h4 id="org64ab50a">from nightly</h4>
-<div class="outline-text-4" id="text-org64ab50a">
+<div id="outline-container-org1df2e67" class="outline-4">
+<h4 id="org1df2e67">from nightly</h4>
+<div class="outline-text-4" id="text-org1df2e67">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://nightly.odoo.com/11.0/nightly/deb/ ./"</span> &gt;&gt; odoo.list</span><br><span class="line">sudo mv odoo.list /etc/apt/sources.list.d/</span><br><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install odoo</span><br></pre></td></tr></table></figure>
 </div>
@@ -322,9 +322,9 @@ If it returns error with chown /var/odoo, just mkdir of this repository.
 </p>
 </div>
 </div>
-<div id="outline-container-org707f01d" class="outline-4">
-<h4 id="org707f01d">from github source code</h4>
-<div class="outline-text-4" id="text-org707f01d">
+<div id="outline-container-org27da744" class="outline-4">
+<h4 id="org27da744">from github source code</h4>
+<div class="outline-text-4" id="text-org27da744">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/odoo/odoo.git odoo11 -b <span class="number">11.0</span> --depth=<span class="number">1</span></span><br><span class="line">sudo chown -R odoo:odoo odoo11</span><br><span class="line"><span class="built_in">cd</span> odoo11</span><br><span class="line">./odoo-bin <span class="operator">-s</span></span><br><span class="line">ps aux | grep odoo</span><br></pre></td></tr></table></figure>
 </div>
@@ -333,20 +333,20 @@ If it returns error with chown /var/odoo, just mkdir of this repository.
 </div>
 </div>
 
-<div id="outline-container-orgc7ca706" class="outline-2">
-<h2 id="orgc7ca706"><span class="section-number-2">2</span> Configuration</h2>
+<div id="outline-container-org59afe48" class="outline-2">
+<h2 id="org59afe48"><span class="section-number-2">2</span> Configuration</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"># sudo vi /etc/odoo/odoo.conf&#10;### Custom addons path&#10;addons_path = /usr/lib/python3/dist-packages/odoo/addons/,/home/odoo/addons&#10;### Custom http port&#10;http_port = 8089</span><br></pre></td></tr></table></figure>
 </div>
 </div>
-<div id="outline-container-org8841210" class="outline-3">
-<h3 id="org8841210"><span class="section-number-3">2.1</span> nginx reverse proxy<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></h3>
+<div id="outline-container-org25e3e70" class="outline-3">
+<h3 id="org25e3e70"><span class="section-number-3">2.1</span> nginx reverse proxy<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org3cf018b" class="outline-4">
-<h4 id="org3cf018b">https 443</h4>
-<div class="outline-text-4" id="text-org3cf018b">
+<div id="outline-container-org9f69283" class="outline-4">
+<h4 id="org9f69283">https 443</h4>
+<div class="outline-text-4" id="text-org9f69283">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br><span class="line"><span class="comment">### Remove nginx's default config of port 80, or just change 80 to 8080 in this file</span></span><br><span class="line">sudo rm /etc/nginx/sites-avaliable/default</span><br><span class="line">sudo vim /etc/nginx/sites-avalibale/odoo.conf</span><br><span class="line"><span class="comment"># openssl req -x509 -days 3650 -subj '/CN=your.domain/' -nodes -newkey rsa:2048 -keyout server.key -out server.crt</span></span><br><span class="line">openssl req -x509 -days <span class="number">3650</span> -nodes -newkey rsa:<span class="number">2048</span> -keyout server.key -out server.crt</span><br><span class="line">sudo mkdir /etc/ssl/nginx</span><br><span class="line">sudo mv server.crt server.key /etc/ssl/nginx</span><br></pre></td></tr></table></figure>
 </div>
@@ -356,9 +356,9 @@ If it returns error with chown /var/odoo, just mkdir of this repository.
 </div>
 </div>
 </div>
-<div id="outline-container-orge7f97ad" class="outline-4">
-<h4 id="orge7f97ad">http port 8089 to http 80<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></h4>
-<div class="outline-text-4" id="text-orge7f97ad">
+<div id="outline-container-orgaefc2db" class="outline-4">
+<h4 id="orgaefc2db">http port 8089 to http 80<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></h4>
+<div class="outline-text-4" id="text-orgaefc2db">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /etc/nginx/sites-enabled/default</span><br><span class="line"><span class="comment">### Paste following area codes to this file.</span></span><br><span class="line">sudo vim /etc/nginx/sites-available/odoo</span><br><span class="line"><span class="comment"># sudo ln -s /etc/nginx/sites-available/odoo /etc/nginx/sites-enabled/odoo</span></span><br><span class="line"><span class="comment">### Test nginx's new config</span></span><br><span class="line">sudo nginx -t</span><br></pre></td></tr></table></figure>
 </div>
@@ -376,8 +376,8 @@ Restrict uploading file size.
 </div>
 </div>
 </div>
-<div id="outline-container-orgb365e5d" class="outline-3">
-<h3 id="orgb365e5d"><span class="section-number-3">2.2</span> git clone</h3>
+<div id="outline-container-orgcd0bd59" class="outline-3">
+<h3 id="orgcd0bd59"><span class="section-number-3">2.2</span> git clone</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 If your odoo server is running on cloud server, work with git between local and cloud.
@@ -388,12 +388,12 @@ If your odoo server is running on cloud server, work with git between local and 
 </div>
 </div>
 </div>
-<div id="outline-container-orgebcd1b9" class="outline-2">
-<h2 id="orgebcd1b9"><span class="section-number-2">3</span> Modules/Addon</h2>
+<div id="outline-container-org4b60c94" class="outline-2">
+<h2 id="org4b60c94"><span class="section-number-2">3</span> Modules/Addon</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org52faee9" class="outline-3">
-<h3 id="org52faee9"><span class="section-number-3">3.1</span> web responsive</h3>
+<div id="outline-container-orgbf0d6ca" class="outline-3">
+<h3 id="orgbf0d6ca"><span class="section-number-3">3.1</span> web responsive</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Pages adapted to mobile/pad screensize.
@@ -403,8 +403,8 @@ Pages adapted to mobile/pad screensize.
 </div>
 </div>
 </div>
-<div id="outline-container-org966e5f1" class="outline-3">
-<h3 id="org966e5f1"><span class="section-number-3">3.2</span> chinese</h3>
+<div id="outline-container-org1ec52ad" class="outline-3">
+<h3 id="org1ec52ad"><span class="section-number-3">3.2</span> chinese</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Reload all module language.
@@ -415,8 +415,8 @@ Reload all module language.
 </div>
 </div>
 </div>
-<div id="outline-container-orgde85d94" class="outline-2">
-<h2 id="orgde85d94"><span class="section-number-2">4</span> API</h2>
+<div id="outline-container-orgecfb3ad" class="outline-2">
+<h2 id="orgecfb3ad"><span class="section-number-2">4</span> API</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 REST or XML-RPC
@@ -430,12 +430,12 @@ REST or XML-RPC
 </div>
 </div>
 
-<div id="outline-container-org230a3de" class="outline-2">
-<h2 id="org230a3de"><span class="section-number-2">5</span> Issues</h2>
+<div id="outline-container-org785056a" class="outline-2">
+<h2 id="org785056a"><span class="section-number-2">5</span> Issues</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org37ecbe0" class="outline-3">
-<h3 id="org37ecbe0"><span class="section-number-3">5.1</span> Deny ssh users/groups</h3>
+<div id="outline-container-org800f72b" class="outline-3">
+<h3 id="org800f72b"><span class="section-number-3">5.1</span> Deny ssh users/groups</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo vim /etc/ssh/sshd_config</span></span><br><span class="line"><span class="comment">## DenyGroups git</span></span><br></pre></td></tr></table></figure>
@@ -485,13 +485,9 @@ REST or XML-RPC
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2018/02/24/ffmpeg/" style="float: left;">
-        ← ffmpeg
-    </a>
     
-    
-    <a class="pull-right" href="/2018/02/09/vsftp/">
-        vsftp →
+    <a class="pull-right" href="/2018/02/24/ffmpeg/">
+        ffmpeg →
     </a>
     
 </nav>

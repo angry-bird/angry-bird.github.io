@@ -105,7 +105,7 @@
 				    
 				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(2)</small></a></li>
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
 				    
@@ -143,7 +143,7 @@
 				    
 				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
 				    
-				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(2)</small></a></li>
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
@@ -159,7 +159,7 @@
 				    
 				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
 				    
-				    <li><a href="/tags/training/" class="animsition-link">training<small>(2)</small></a></li>
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
 				    
@@ -284,36 +284,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org59a76d4">1. 文件</a>
+<li><a href="#org758d537">1. 文件</a>
 <ul>
-<li><a href="#orgf5810b8">1.1. 文件创建、显示内容、修改属主属性</a></li>
-<li><a href="#org9b89204">1.2. Loopback filesystem vs. loopback file</a></li>
-<li><a href="#org00b2d70">1.3. Creating &amp; Mounting ISO files as loopback</a></li>
-<li><a href="#org72f8ad3">1.4. Compression</a></li>
-<li><a href="#org91abea4">1.5. Archiving</a></li>
+<li><a href="#org859a9ff">1.1. 文件创建、显示内容、修改属主属性</a></li>
+<li><a href="#org429d9b8">1.2. Loopback filesystem vs. loopback file</a></li>
+<li><a href="#org7e2ce21">1.3. Creating &amp; Mounting ISO files as loopback</a></li>
+<li><a href="#org520f738">1.4. Compression</a></li>
+<li><a href="#org92de7f1">1.5. Archiving</a></li>
 </ul>
 </li>
-<li><a href="#orgea528d4">2. 用户</a>
+<li><a href="#orgbdd953f">2. 用户</a>
 <ul>
-<li><a href="#org837d6e0">2.1. 添加、修改、删除</a></li>
-<li><a href="#org261057a">2.2. 登录信息</a></li>
+<li><a href="#orga83108a">2.1. 添加、修改、删除</a></li>
+<li><a href="#orgb915441">2.2. 登录信息</a></li>
 </ul>
 </li>
-<li><a href="#org2cfaa65">3. 系统</a>
+<li><a href="#orgf00981c">3. 系统</a>
 <ul>
-<li><a href="#org0f451ef">3.1. 硬盘使用量</a></li>
-<li><a href="#orgdf3bb87">3.2. CPU 时间使用量</a></li>
-<li><a href="#orge015aa9">3.3. 系统资源使用量</a></li>
-<li><a href="#org9f286c9">3.4. 计划任务</a></li>
+<li><a href="#org959e48f">3.1. 硬盘使用量</a></li>
+<li><a href="#org192f84c">3.2. CPU 时间使用量</a></li>
+<li><a href="#org5bd9510">3.3. 系统资源使用量</a></li>
+<li><a href="#org8024edb">3.4. 计划任务</a></li>
 </ul>
 </li>
-<li><a href="#org032ac01">4. 网络</a>
+<li><a href="#orgdce861e">4. 网络</a>
 <ul>
-<li><a href="#orgcffd6fd">4.1. ip</a></li>
-<li><a href="#org233ef19">4.2. ifconfig</a></li>
-<li><a href="#org89795d2">4.3. networkmanager</a></li>
-<li><a href="#org1387333">4.4. write static ip</a></li>
-<li><a href="#org51f57da">4.5. network communication</a></li>
+<li><a href="#org7923e5b">4.1. ip</a></li>
+<li><a href="#org70fb1fe">4.2. ifconfig</a></li>
+<li><a href="#orgef8a765">4.3. networkmanager</a></li>
+<li><a href="#orga119d7c">4.4. write static ip</a></li>
+<li><a href="#orgea2ecf3">4.5. network communication</a></li>
 </ul>
 </li>
 </ul>
@@ -324,57 +324,57 @@
 <p>
 第 1 篇 介绍 Linux 系统配置命令，包括文件修改，用户添加、删除、修改，网络配置
 </p>
-<div id="outline-container-org59a76d4" class="outline-2">
-<h2 id="org59a76d4"><span class="section-number-2">1</span> 文件</h2>
+<div id="outline-container-org758d537" class="outline-2">
+<h2 id="org758d537"><span class="section-number-2">1</span> 文件</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgf5810b8" class="outline-3">
-<h3 id="orgf5810b8"><span class="section-number-3">1.1</span> 文件创建、显示内容、修改属主属性</h3>
+<div id="outline-container-org859a9ff" class="outline-3">
+<h3 id="org859a9ff"><span class="section-number-3">1.1</span> 文件创建、显示内容、修改属主属性</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero bs=<span class="number">100</span>k count=<span class="number">1</span> of=data.file</span><br><span class="line"><span class="comment"># touch modify files, create them if they not exist</span></span><br><span class="line">touch file{<span class="number">1</span>..<span class="number">100</span>}.sh</span><br><span class="line"><span class="comment"># modify access &amp; modification time</span></span><br><span class="line">touch <span class="operator">-a</span> file.sh</span><br><span class="line">touch -m file.sh</span><br><span class="line">touch <span class="operator">-d</span> <span class="string">"jan 20 2017"</span> file.sh</span><br><span class="line">ln <span class="operator">-s</span> target_file symlink_name</span><br><span class="line">find . -type l -print</span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">test</span>&gt;&gt;file.sh</span><br><span class="line">file file.sh</span><br><span class="line">file -b file.sh</span><br><span class="line">cat file.sh</span><br><span class="line">chmod <span class="number">755</span> file.sh</span><br><span class="line">chmod u=rwx g=rw o=r file.sh</span><br><span class="line">chmod a+x file.sh</span><br><span class="line"><span class="comment">## Recursively change permissions to current directory</span></span><br><span class="line">chmod <span class="number">777</span> . -R</span><br><span class="line"><span class="comment"># chown user.group filename</span></span><br><span class="line">chown zuoshi.kali file.sh</span><br><span class="line">chown zuoshi.kali . -R</span><br><span class="line"><span class="comment"># make immutable file</span></span><br><span class="line">chattr +i file.sh</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org9b89204" class="outline-3">
-<h3 id="org9b89204"><span class="section-number-3">1.2</span> Loopback filesystem vs. loopback file</h3>
+<div id="outline-container-org429d9b8" class="outline-3">
+<h3 id="org429d9b8"><span class="section-number-3">1.2</span> Loopback filesystem vs. loopback file</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=loopbackfile.img bs=<span class="number">1</span>G count=<span class="number">1</span></span><br><span class="line">mkfs.ext4 loopbackfile.img</span><br><span class="line">sudo mkdir /mnt/lookback</span><br><span class="line">mount -o loop loopbackfile.img /mnt/loopback</span><br><span class="line"><span class="comment"># Or use follow steps to mount loopbackfile</span></span><br><span class="line">losetup /dev/loop1 loopbackfile.img</span><br><span class="line">mount /dev/loop1 /mnt/loopback</span><br><span class="line"><span class="comment"># 1st partition on disk img file, just like sda1 on sda</span></span><br><span class="line"><span class="comment"># offset is 32256 byte</span></span><br><span class="line">losetup -o <span class="number">32256</span> /dev/loop2 loopbackfile.img</span><br><span class="line">umount /dev/loop1</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org00b2d70" class="outline-3">
-<h3 id="org00b2d70"><span class="section-number-3">1.3</span> Creating &amp; Mounting ISO files as loopback</h3>
+<div id="outline-container-org7e2ce21" class="outline-3">
+<h3 id="org7e2ce21"><span class="section-number-3">1.3</span> Creating &amp; Mounting ISO files as loopback</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">cat /dev/cdrom &gt; linux.iso</span><br><span class="line"><span class="comment"># The preferred way</span></span><br><span class="line">dd <span class="keyword">if</span>=/dev/cdrom of=linux.iso</span><br><span class="line"><span class="comment"># Another way</span></span><br><span class="line">mkisofs -V <span class="string">"Label"</span> -o linux.iso <span class="built_in">source</span>_dir/</span><br><span class="line"><span class="comment"># Hybrid ISO can be written to USB sd as a bootable USB device,</span></span><br><span class="line"><span class="comment"># So convernt bootable ISO file to Hybrid ISO</span></span><br><span class="line">isohybrid linux.iso</span><br><span class="line"><span class="comment"># Write it to usb sd</span></span><br><span class="line">dd <span class="keyword">if</span>=linux.iso of=/dev/sdb1</span><br><span class="line"><span class="comment"># Or just use cat</span></span><br><span class="line">cat linux.iso &gt; /dev/sdb1</span><br><span class="line"><span class="comment"># Burning an iso file into CD ROM or DVD ROM</span></span><br><span class="line">cdrecord -v dev=/dev/cdrom linux.iso</span><br><span class="line"><span class="comment"># mounting iso files</span></span><br><span class="line">mkdir /mnt/iso</span><br><span class="line">mount -o loop linux.iso /mnt/iso</span><br><span class="line"><span class="comment"># Flush into iso file</span></span><br><span class="line">sync</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org72f8ad3" class="outline-3">
-<h3 id="org72f8ad3"><span class="section-number-3">1.4</span> Compression</h3>
+<div id="outline-container-org520f738" class="outline-3">
+<h3 id="org520f738"><span class="section-number-3">1.4</span> Compression</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<div id="outline-container-org227083f" class="outline-4">
-<h4 id="org227083f">zip</h4>
-<div class="outline-text-4" id="text-org227083f">
+<div id="outline-container-orgff650aa" class="outline-4">
+<h4 id="orgff650aa">zip</h4>
+<div class="outline-text-4" id="text-orgff650aa">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">zip arch.zip file</span><br><span class="line">zip -r arch.zip dire file</span><br><span class="line"><span class="comment"># Delete file from arch.zip</span></span><br><span class="line">zip <span class="operator">-d</span> arch.zip file</span><br><span class="line"><span class="comment"># Update</span></span><br><span class="line">zip arch.zip -u newfile</span><br><span class="line"><span class="comment"># List</span></span><br><span class="line">unzip <span class="operator">-l</span> arch.zip</span><br><span class="line"><span class="comment"># Extract</span></span><br><span class="line">unzip file.zip</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb805c07" class="outline-4">
-<h4 id="orgb805c07">gz, bz2, xz</h4>
-<div class="outline-text-4" id="text-orgb805c07">
+<div id="outline-container-orgb4d30de" class="outline-4">
+<h4 id="orgb4d30de">gz, bz2, xz</h4>
+<div class="outline-text-4" id="text-orgb4d30de">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">gzip file</span><br><span class="line">gunzip arch.gz</span><br><span class="line"><span class="comment"># List</span></span><br><span class="line">gzip <span class="operator">-l</span> arch.gz</span><br><span class="line"><span class="comment"># Read from =stdio= and compress output file</span></span><br><span class="line">cat file | gzip -c &gt; arch.gz</span><br><span class="line"><span class="comment"># Dump extracted file without extracting gz</span></span><br><span class="line">zcat arch.gz</span><br><span class="line"><span class="comment"># Compression ratio</span></span><br><span class="line">gzip -<span class="number">9</span> file</span><br><span class="line"><span class="comment"># bzip &amp; bzip2</span></span><br><span class="line">bzip2 file</span><br><span class="line">bunzip2 arch.bz2</span><br><span class="line">bunzip2 arch.bz2 -k</span><br><span class="line">cat file | bzip2 -c &gt; arch.tar.bz2</span><br><span class="line"><span class="comment"># lzma</span></span><br><span class="line">lzma file</span><br><span class="line">unlzma file</span><br><span class="line">cat file | lzma -c &gt; file.lzma</span><br><span class="line"><span class="comment"># xz</span></span><br><span class="line">xz -z file</span><br><span class="line">xz <span class="operator">-d</span> arch.xz</span><br><span class="line">xz <span class="operator">-d</span> arch.xz -k</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa2a7af" class="outline-4">
-<h4 id="orgfa2a7af">squashfs</h4>
-<div class="outline-text-4" id="text-orgfa2a7af">
+<div id="outline-container-org44e1948" class="outline-4">
+<h4 id="org44e1948">squashfs</h4>
+<div class="outline-text-4" id="text-org44e1948">
 <p>
 只读压缩文件，可以将 2-3G 的数据压缩到 700M 大小的文件，正如 Linux 的 Live CD 一样。
 配合 loopback 模式挂载压缩文件，因每次只解压少量文件，而能维持较高访问速度。
@@ -384,38 +384,38 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0510a7f" class="outline-4">
-<h4 id="org0510a7f">crypo tools</h4>
-<div class="outline-text-4" id="text-org0510a7f">
+<div id="outline-container-orgdf836c1" class="outline-4">
+<h4 id="orgdf836c1">crypo tools</h4>
+<div class="outline-text-4" id="text-orgdf836c1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">crypt PASSPHRASE input encrypted</span><br><span class="line">gpg -c input</span><br><span class="line">gpg file.gpg</span><br><span class="line">base64 file &gt; out_file</span><br><span class="line">md5sum file</span><br><span class="line">sha1sum file</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org31ba318" class="outline-4">
-<h4 id="org31ba318">sync &amp; backup</h4>
-<div class="outline-text-4" id="text-org31ba318">
+<div id="outline-container-orgd27242b" class="outline-4">
+<h4 id="orgd27242b">sync &amp; backup</h4>
+<div class="outline-text-4" id="text-orgd27242b">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rsync -az /home/zuoshi /home/backup</span><br><span class="line">rsync -az <span class="built_in">source</span>_path dest_path --exclude <span class="string">"*.txt"</span></span><br><span class="line">rsync -az <span class="built_in">source</span>_path dest_path --exclude-from exclude.list</span><br><span class="line"><span class="comment"># Delete non-exist files from destination path</span></span><br><span class="line">rsync -az <span class="built_in">source</span>_path dest_path --delete</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org91abea4" class="outline-3">
-<h3 id="org91abea4"><span class="section-number-3">1.5</span> Archiving</h3>
+<div id="outline-container-org92de7f1" class="outline-3">
+<h3 id="org92de7f1"><span class="section-number-3">1.5</span> Archiving</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-orgfbbcb16" class="outline-4">
-<h4 id="orgfbbcb16">tar</h4>
-<div class="outline-text-4" id="text-orgfbbcb16">
+<div id="outline-container-orge8c96e4" class="outline-4">
+<h4 id="orge8c96e4">tar</h4>
+<div class="outline-text-4" id="text-orge8c96e4">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create and compress after archiving</span></span><br><span class="line">tar -cf output.tar file1 file2 folder1 ..</span><br><span class="line"><span class="comment">#-a --auto-compress with extension</span></span><br><span class="line">tar -caf output.tar.xz file1 file2</span><br><span class="line">tar -czf output.tar.gz file1 file2</span><br><span class="line">tar -cjf output.tar.bz2 file1 file2</span><br><span class="line"><span class="comment"># --lzma xz</span></span><br><span class="line">tar -cJf output.tar.xz file1 file2</span><br><span class="line"><span class="comment"># --total printing total bytes after archiving</span></span><br><span class="line"><span class="comment"># Exclude a set of file from archiving</span></span><br><span class="line">tar -cf arch.tar * --exclude <span class="string">"*.txt"</span></span><br><span class="line">tar -cf arch.tar * -X EXCLUED.LIST</span><br><span class="line"><span class="comment"># Exclude version control directory</span></span><br><span class="line">tar --exclude-vcs -czvvf <span class="built_in">source</span>_code.tar.gz DIRE</span><br><span class="line"><span class="comment"># Extract to</span></span><br><span class="line">tar -xf archive.tar -C /path/to/extra_dir</span><br><span class="line">tar -xJf output.tar.gz</span><br><span class="line"><span class="comment"># Extract and delete</span></span><br><span class="line">tar -xzf output.tar.gz --remove-files</span><br><span class="line"><span class="comment"># Update</span></span><br><span class="line">tar -rf output.tar new_file</span><br><span class="line"><span class="comment"># Updating only file1 has newer modification timestamp</span></span><br><span class="line">tar -uf archive.tar file1</span><br><span class="line"><span class="comment"># Merge tarballs</span></span><br><span class="line">tar -Af file1.tar file2.tar</span><br><span class="line"><span class="comment"># List = test</span></span><br><span class="line">tar -tf output.tar</span><br><span class="line"><span class="comment"># Differ</span></span><br><span class="line">tar -df archive.tar file1 file2</span><br><span class="line"><span class="comment"># Delete files in archive</span></span><br><span class="line">tar <span class="operator">-f</span> archive.tar --delete file1 file2</span><br><span class="line">tar --delete --file archive.tar file1 file2</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgefa90d9" class="outline-4">
-<h4 id="orgefa90d9">cpio</h4>
-<div class="outline-text-4" id="text-orgefa90d9">
+<div id="outline-container-org1c2aec5" class="outline-4">
+<h4 id="org1c2aec5">cpio</h4>
+<div class="outline-text-4" id="text-org1c2aec5">
 <p>
 文件夹和带有路径的文件， <code>cpio</code> 压缩解压时会遵守绝对路径， <code>tar</code> 则移除 <code>/</code> 转换成当前目录的相对路径。
 </p>
@@ -426,20 +426,20 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgea528d4" class="outline-2">
-<h2 id="orgea528d4"><span class="section-number-2">2</span> 用户</h2>
+<div id="outline-container-orgbdd953f" class="outline-2">
+<h2 id="orgbdd953f"><span class="section-number-2">2</span> 用户</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org837d6e0" class="outline-3">
-<h3 id="org837d6e0"><span class="section-number-3">2.1</span> 添加、修改、删除</h3>
+<div id="outline-container-orga83108a" class="outline-3">
+<h3 id="orga83108a"><span class="section-number-3">2.1</span> 添加、修改、删除</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">useradd -g users <span class="operator">-s</span> /bin/bash -m name</span><br><span class="line">usermod <span class="operator">-d</span> /mnt/usb/home -m name</span><br><span class="line">passwd name</span><br><span class="line">userdel name</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org261057a" class="outline-3">
-<h3 id="org261057a"><span class="section-number-3">2.2</span> 登录信息</h3>
+<div id="outline-container-orgb915441" class="outline-3">
+<h3 id="orgb915441"><span class="section-number-3">2.2</span> 登录信息</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">who</span><br><span class="line">w</span><br><span class="line">users</span><br><span class="line">uptime</span><br><span class="line">last</span><br><span class="line">lastb</span><br></pre></td></tr></table></figure>
@@ -447,28 +447,28 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org2cfaa65" class="outline-2">
-<h2 id="org2cfaa65"><span class="section-number-2">3</span> 系统</h2>
+<div id="outline-container-orgf00981c" class="outline-2">
+<h2 id="orgf00981c"><span class="section-number-2">3</span> 系统</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org0f451ef" class="outline-3">
-<h3 id="org0f451ef"><span class="section-number-3">3.1</span> 硬盘使用量</h3>
+<div id="outline-container-org959e48f" class="outline-3">
+<h3 id="org959e48f"><span class="section-number-3">3.1</span> 硬盘使用量</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Disk usage</span></span><br><span class="line">du -sh</span><br><span class="line">du -ch</span><br><span class="line">du file</span><br><span class="line">du <span class="operator">-a</span> directory</span><br><span class="line"><span class="comment"># Print size in bytes(default), kilobytes, megabytes, Block size(n bytes)</span></span><br><span class="line">du -b file</span><br><span class="line">du -k file</span><br><span class="line">du -m file</span><br><span class="line">du -B <span class="number">4</span> file</span><br><span class="line"><span class="comment"># Exclude files</span></span><br><span class="line">du --exclude <span class="string">"*.org"</span> deft</span><br><span class="line">du --exclude-from exclude.txt deft</span><br><span class="line">du --max-depth <span class="number">2</span> deft</span><br><span class="line"><span class="comment"># 10 largest size file</span></span><br><span class="line">du -ak deft | sort -nrk <span class="number">1</span> | head</span><br><span class="line"><span class="comment"># Disk free space</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf3bb87" class="outline-3">
-<h3 id="orgdf3bb87"><span class="section-number-3">3.2</span> CPU 时间使用量</h3>
+<div id="outline-container-org192f84c" class="outline-3">
+<h3 id="org192f84c"><span class="section-number-3">3.2</span> CPU 时间使用量</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">time COMMAND</span><br><span class="line">time ls</span><br><span class="line">time -o output.txt COMMAND</span><br><span class="line">time <span class="operator">-f</span> <span class="string">"Time: %U"</span> <span class="operator">-a</span> -o output.txt ls</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orge015aa9" class="outline-3">
-<h3 id="orge015aa9"><span class="section-number-3">3.3</span> 系统资源使用量</h3>
+<div id="outline-container-org5bd9510" class="outline-3">
+<h3 id="org5bd9510"><span class="section-number-3">3.3</span> 系统资源使用量</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps</span><br><span class="line">ps -fe | head</span><br><span class="line">top</span><br><span class="line">pgrep</span><br><span class="line">lsof</span><br></pre></td></tr></table></figure>
@@ -481,8 +481,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9f286c9" class="outline-3">
-<h3 id="org9f286c9"><span class="section-number-3">3.4</span> 计划任务</h3>
+<div id="outline-container-org8024edb" class="outline-3">
+<h3 id="org8024edb"><span class="section-number-3">3.4</span> 计划任务</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a scheduling task</span></span><br><span class="line">crontab <span class="operator">-e</span></span><br><span class="line"><span class="comment"># 02 02 * * * /home/zuoshi/test.sh</span></span><br><span class="line">crontab task.cron</span><br><span class="line">crontab &lt;&lt; EOF</span><br><span class="line">http_proxy=http://<span class="number">192.168</span>.<span class="number">0.3</span>:<span class="number">3128</span></span><br><span class="line"><span class="number">00</span> * * * * /home/zuoshi/download.sh</span><br><span class="line"><span class="comment"># Viewing the cron table</span></span><br><span class="line">crontab <span class="operator">-l</span> -u zuoshi</span><br><span class="line"><span class="comment"># Removing the cron table</span></span><br><span class="line">crontab -r</span><br></pre></td></tr></table></figure>
@@ -490,44 +490,44 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org032ac01" class="outline-2">
-<h2 id="org032ac01"><span class="section-number-2">4</span> 网络</h2>
+<div id="outline-container-orgdce861e" class="outline-2">
+<h2 id="orgdce861e"><span class="section-number-2">4</span> 网络</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgcffd6fd" class="outline-3">
-<h3 id="orgcffd6fd"><span class="section-number-3">4.1</span> ip</h3>
+<div id="outline-container-org7923e5b" class="outline-3">
+<h3 id="org7923e5b"><span class="section-number-3">4.1</span> ip</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> nameserver <span class="number">8.8</span>.<span class="number">8.8</span> &gt;&gt; /etc/resolv.conf</span><br><span class="line">ip addr show</span><br><span class="line">ip link status</span><br><span class="line">ip addr add <span class="number">192.168</span>.<span class="number">0.10</span>/<span class="number">24</span> broadcast <span class="number">192.168</span>.<span class="number">0.255</span> dev ens33</span><br><span class="line">ip link <span class="built_in">set</span> ens33 up</span><br><span class="line">ip route add default via <span class="number">192.168</span>.<span class="number">0.1</span></span><br><span class="line">ping -c2 github.com</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org233ef19" class="outline-3">
-<h3 id="org233ef19"><span class="section-number-3">4.2</span> ifconfig</h3>
+<div id="outline-container-org70fb1fe" class="outline-3">
+<h3 id="org70fb1fe"><span class="section-number-3">4.2</span> ifconfig</h3>
 <div class="outline-text-3" id="text-4-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 up</span><br><span class="line">ifconfig eth0 <span class="number">192.168</span>.<span class="number">0.1</span> netmask <span class="number">255.255</span>.<span class="number">255.0</span> broadcast <span class="number">192.168</span>.<span class="number">0.255</span></span><br><span class="line">route add default gw <span class="number">192.168</span>.<span class="number">0.100</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org89795d2" class="outline-3">
-<h3 id="org89795d2"><span class="section-number-3">4.3</span> networkmanager</h3>
+<div id="outline-container-orgef8a765" class="outline-3">
+<h3 id="orgef8a765"><span class="section-number-3">4.3</span> networkmanager</h3>
 <div class="outline-text-3" id="text-4-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nmcli connection add con-name <span class="string">"static"</span> ifname eth0 <span class="built_in">type</span> ethernet autoconnect yes ip4 <span class="number">192.168</span>.<span class="number">0.1</span> gw4 <span class="number">192.168</span>.<span class="number">0.101</span></span><br><span class="line">nmcli connection modify <span class="string">"static"</span> ipv4.dns <span class="number">8.8</span>.<span class="number">4.4</span></span><br><span class="line">nmcli connection modify <span class="string">"static"</span> +ipv4.dns <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nmcli connection modify <span class="string">"static"</span> +ipv4.addresses <span class="number">192.168</span>.<span class="number">0.2</span>/<span class="number">24</span></span><br><span class="line">nmcli connection up static</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org1387333" class="outline-3">
-<h3 id="org1387333"><span class="section-number-3">4.4</span> write static ip</h3>
+<div id="outline-container-orga119d7c" class="outline-3">
+<h3 id="orga119d7c"><span class="section-number-3">4.4</span> write static ip</h3>
 <div class="outline-text-3" id="text-4-4">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">## /etc/network/interfaces&#10;# This file describes the network interfaces available on your system&#10;# and how to activate them. For more information, see interfaces(5).&#10;source /etc/network/interfaces.d/*&#10;# The loopback network interface&#10;auto lo&#10;iface lo inet loopback&#10;# Static inet&#10;auto eth0&#10;iface eth0 inet static&#10;    address 192.168.0.1&#10;    netmask 255.255.255.0&#10;    broadcast 192.168.0.255&#10;    gateway 192.168.0.100</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org51f57da" class="outline-3">
-<h3 id="org51f57da"><span class="section-number-3">4.5</span> network communication</h3>
+<div id="outline-container-orgea2ecf3" class="outline-3">
+<h3 id="orgea2ecf3"><span class="section-number-3">4.5</span> network communication</h3>
 <div class="outline-text-3" id="text-4-5">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsof -i</span><br><span class="line">netstat -antp</span><br></pre></td></tr></table></figure>

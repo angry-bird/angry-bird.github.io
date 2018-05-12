@@ -105,7 +105,7 @@
 				    
 				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(2)</small></a></li>
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
 				    
@@ -143,7 +143,7 @@
 				    
 				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
 				    
-				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(2)</small></a></li>
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
@@ -159,7 +159,7 @@
 				    
 				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
 				    
-				    <li><a href="/tags/training/" class="animsition-link">training<small>(2)</small></a></li>
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
 				    
@@ -284,28 +284,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6abf831">1. Demo</a></li>
-<li><a href="#org54d214e">2. Details</a>
+<li><a href="#org658759c">1. Demo</a></li>
+<li><a href="#org5b67be5">2. Details</a>
 <ul>
-<li><a href="#org1a1af1a">2.1. Add user group for vsftpd</a></li>
-<li><a href="#orgdc2fe4f">2.2. Add users to ftp group</a></li>
-<li><a href="#org6986bc4">2.3. Install vsftpd</a></li>
-<li><a href="#org11bd1d1">2.4. Config vsftpd</a></li>
-<li><a href="#org25ed81c">2.5. Run vsftpd</a></li>
+<li><a href="#orgc163040">2.1. Add user group for vsftpd</a></li>
+<li><a href="#org9b735f8">2.2. Add users to ftp group</a></li>
+<li><a href="#org8d97de6">2.3. Install vsftpd</a></li>
+<li><a href="#org0b2e241">2.4. Config vsftpd</a></li>
+<li><a href="#org5448a5a">2.5. Run vsftpd</a></li>
 </ul>
 </li>
-<li><a href="#org416a81c">3. Issues</a>
+<li><a href="#orgbd85edf">3. Issues</a>
 <ul>
-<li><a href="#org0413515">3.1. 530</a></li>
-<li><a href="#org625aadf">3.2. 500</a></li>
+<li><a href="#org87a5608">3.1. 530</a></li>
+<li><a href="#org08eaf73">3.2. 500</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <a id="more"></a>
-<div id="outline-container-org6abf831" class="outline-2">
-<h2 id="org6abf831"><span class="section-number-2">1</span> Demo</h2>
+<div id="outline-container-org658759c" class="outline-2">
+<h2 id="org658759c"><span class="section-number-2">1</span> Demo</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Scenario of a super user(full access to all folders) and multi normal users(only their own folders).
@@ -339,12 +339,12 @@ Set all normal users' home directory to be accessed by group <b>gftp</b> by <cod
 </ol>
 </div>
 </div>
-<div id="outline-container-org54d214e" class="outline-2">
-<h2 id="org54d214e"><span class="section-number-2">2</span> Details</h2>
+<div id="outline-container-org5b67be5" class="outline-2">
+<h2 id="org5b67be5"><span class="section-number-2">2</span> Details</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org1a1af1a" class="outline-3">
-<h3 id="org1a1af1a"><span class="section-number-3">2.1</span> Add user group for vsftpd</h3>
+<div id="outline-container-orgc163040" class="outline-3">
+<h3 id="orgc163040"><span class="section-number-3">2.1</span> Add user group for vsftpd</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Setting a group for ftp, and ftp users are add to this group. This will be more appropriate for security and privacy.
@@ -354,24 +354,24 @@ Setting a group for ftp, and ftp users are add to this group. This will be more 
 </div>
 </div>
 </div>
-<div id="outline-container-orgdc2fe4f" class="outline-3">
-<h3 id="orgdc2fe4f"><span class="section-number-3">2.2</span> Add users to ftp group</h3>
+<div id="outline-container-org9b735f8" class="outline-3">
+<h3 id="org9b735f8"><span class="section-number-3">2.2</span> Add users to ftp group</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mkdir /srv/ftp/<span class="built_in">echo</span></span><br><span class="line">chown <span class="built_in">echo</span>:gftp /srv/ftp/<span class="built_in">echo</span> -R</span><br><span class="line">useradd <span class="operator">-d</span> /srv/ftp/<span class="built_in">echo</span> -g gftp <span class="built_in">echo</span></span><br><span class="line">passwd <span class="built_in">echo</span></span><br><span class="line"><span class="comment">### Another User that sharing all files with OTHER GROUP USERS.</span></span><br><span class="line">mkdir /srv/ftp/<span class="built_in">echo</span>/demo</span><br><span class="line">useradd <span class="operator">-d</span> /srv/ftp/<span class="built_in">echo</span>/demo -g gftp demo</span><br><span class="line"><span class="comment">### Group own this folder, that means demo is the least privilege user.</span></span><br><span class="line">chown demo:gftp /srv/ftp/<span class="built_in">echo</span>/demo -R</span><br><span class="line">chmod g+rw /srv/ftp/<span class="built_in">echo</span>/demo -R</span><br><span class="line">passwd demo</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org6986bc4" class="outline-3">
-<h3 id="org6986bc4"><span class="section-number-3">2.3</span> Install vsftpd</h3>
+<div id="outline-container-org8d97de6" class="outline-3">
+<h3 id="org8d97de6"><span class="section-number-3">2.3</span> Install vsftpd</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org11bd1d1" class="outline-3">
-<h3 id="org11bd1d1"><span class="section-number-3">2.4</span> Config vsftpd</h3>
+<div id="outline-container-org0b2e241" class="outline-3">
+<h3 id="org0b2e241"><span class="section-number-3">2.4</span> Config vsftpd</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
@@ -381,8 +381,8 @@ Setting a group for ftp, and ftp users are add to this group. This will be more 
 </div>
 </div>
 </div>
-<div id="outline-container-org25ed81c" class="outline-3">
-<h3 id="org25ed81c"><span class="section-number-3">2.5</span> Run vsftpd</h3>
+<div id="outline-container-org5448a5a" class="outline-3">
+<h3 id="org5448a5a"><span class="section-number-3">2.5</span> Run vsftpd</h3>
 <div class="outline-text-3" id="text-2-5">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start</span><br><span class="line">service vsftpd stop</span><br></pre></td></tr></table></figure>
@@ -393,12 +393,12 @@ Setting a group for ftp, and ftp users are add to this group. This will be more 
 </div>
 </div>
 </div>
-<div id="outline-container-org416a81c" class="outline-2">
-<h2 id="org416a81c"><span class="section-number-2">3</span> Issues</h2>
+<div id="outline-container-orgbd85edf" class="outline-2">
+<h2 id="orgbd85edf"><span class="section-number-2">3</span> Issues</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org0413515" class="outline-3">
-<h3 id="org0413515"><span class="section-number-3">3.1</span> 530</h3>
+<div id="outline-container-org87a5608" class="outline-3">
+<h3 id="org87a5608"><span class="section-number-3">3.1</span> 530</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Comment the last line of this file.
@@ -408,8 +408,8 @@ Comment the last line of this file.
 </div>
 </div>
 </div>
-<div id="outline-container-org625aadf" class="outline-3">
-<h3 id="org625aadf"><span class="section-number-3">3.2</span> 500</h3>
+<div id="outline-container-org08eaf73" class="outline-3">
+<h3 id="org08eaf73"><span class="section-number-3">3.2</span> 500</h3>
 <div class="outline-text-3" id="text-3-2">
 <pre class="example">
 500 OOPS: vsftpd: refusing to run with writable root inside chroot()
@@ -428,8 +428,8 @@ Comment the last line of this file.
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2018/02/24/odoo/" style="float: left;">
-        ← odoo
+    <a class="pull-left" href="/2018/02/24/ffmpeg/" style="float: left;">
+        ← ffmpeg
     </a>
     
     

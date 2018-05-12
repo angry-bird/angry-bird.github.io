@@ -105,7 +105,7 @@
 				    
 				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(2)</small></a></li>
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
 				    
@@ -143,7 +143,7 @@
 				    
 				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
 				    
-				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(2)</small></a></li>
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
 				    
@@ -159,7 +159,7 @@
 				    
 				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
 				    
-				    <li><a href="/tags/training/" class="animsition-link">training<small>(2)</small></a></li>
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
 				    
@@ -284,11 +284,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0ddb083">1. Downloads utils</a>
+<li><a href="#org561a19b">1. Downloads utils</a>
 <ul>
-<li><a href="#org524ee6c">1.1. wget</a></li>
-<li><a href="#org4c80190">1.2. curl</a></li>
-<li><a href="#org79d8729">1.3. others</a></li>
+<li><a href="#orgaa52d09">1.1. wget</a></li>
+<li><a href="#orga8a6500">1.2. curl</a></li>
+<li><a href="#orgb0764a9">1.3. others</a></li>
 </ul>
 </li>
 </ul>
@@ -299,28 +299,28 @@
 <p>
 Chapter 3 About Network
 </p>
-<div id="outline-container-org0ddb083" class="outline-2">
-<h2 id="org0ddb083"><span class="section-number-2">1</span> Downloads utils</h2>
+<div id="outline-container-org561a19b" class="outline-2">
+<h2 id="org561a19b"><span class="section-number-2">1</span> Downloads utils</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org524ee6c" class="outline-3">
-<h3 id="org524ee6c"><span class="section-number-3">1.1</span> wget</h3>
+<div id="outline-container-orgaa52d09" class="outline-3">
+<h3 id="orgaa52d09"><span class="section-number-3">1.1</span> wget</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">wget URL</span><br><span class="line">wget URL1 URL2</span><br><span class="line"><span class="comment"># Downloaded file name and print logs to file</span></span><br><span class="line">wget URL -O down.file -o down.log</span><br><span class="line"><span class="comment"># Try 5 times</span></span><br><span class="line">wget -t <span class="number">5</span> URL</span><br><span class="line"><span class="comment"># Limit speed</span></span><br><span class="line">wget --limit-rate <span class="number">20</span>k URL</span><br><span class="line"><span class="comment"># Quota of download</span></span><br><span class="line">wget -Q <span class="number">100</span>m URL</span><br><span class="line"><span class="comment"># Resume downloading and continue</span></span><br><span class="line">wget -c URL</span><br><span class="line"><span class="comment"># Authentication for HTTP FTP</span></span><br><span class="line">wget --user NAME --password PASS URL</span><br><span class="line"><span class="comment"># Copy webpage as formatted txt</span></span><br><span class="line">lynx -dump URL &gt; webpage.txt</span><br><span class="line"><span class="comment"># Copy a complete website</span></span><br><span class="line">wget --mirror URL</span><br><span class="line">wget -r -N <span class="operator">-l</span> DEPTH URL</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org4c80190" class="outline-3">
-<h3 id="org4c80190"><span class="section-number-3">1.2</span> curl</h3>
+<div id="outline-container-orga8a6500" class="outline-3">
+<h3 id="orga8a6500"><span class="section-number-3">1.2</span> curl</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># More powerful tool</span></span><br><span class="line">curl URL --slient</span><br><span class="line">curl URL &gt; index.html</span><br><span class="line"><span class="comment"># Write to file not ~stdout~</span></span><br><span class="line">curl URL --slient -O</span><br><span class="line">curl URL --slient -o NEW_FILE</span><br><span class="line"><span class="comment"># Progress bar</span></span><br><span class="line">curl URL --progress -o NEW_FILE</span><br><span class="line"><span class="comment"># Resume</span></span><br><span class="line">curl URL/file -C offset</span><br><span class="line"><span class="comment"># Cookies</span></span><br><span class="line">curl URL --cookie-jar cookie_file</span><br><span class="line"><span class="comment"># User agent</span></span><br><span class="line">curl URL --user-agent <span class="string">"Mozilla/5.0"</span></span><br><span class="line"><span class="comment"># Header</span></span><br><span class="line">curl -H <span class="string">"Host: www.archlinux.org"</span> -H <span class="string">"Accept-language: en"</span> URL</span><br><span class="line"><span class="comment"># Limit speed/bandwidth</span></span><br><span class="line">curl URL --limit-rate <span class="number">20</span>k</span><br><span class="line"><span class="comment"># Quota of download</span></span><br><span class="line">curl URL --max-filesize bytes</span><br><span class="line"><span class="comment"># Authentication for HTTP FTP</span></span><br><span class="line">curl -u USER:PASS URL</span><br><span class="line">curl -u USER URL</span><br><span class="line"><span class="comment"># Dump only HTTP headers without downloading file</span></span><br><span class="line">curl -I URL</span><br><span class="line">curl -head URL</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org79d8729" class="outline-3">
-<h3 id="org79d8729"><span class="section-number-3">1.3</span> others</h3>
+<div id="outline-container-orgb0764a9" class="outline-3">
+<h3 id="orgb0764a9"><span class="section-number-3">1.3</span> others</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">axel URL --slient -o</span><br><span class="line">httpie URL</span><br></pre></td></tr></table></figure>
