@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Python3 UDP | This world is a bridge</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="This world is a bridge">
+    <meta name="author" content="zuoshi">
+    <meta name="description" content="One wild and precious life" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="This world is a bridge" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">live in emacs</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">kali</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/SP/" class="animsition-link">SP<small>(0)</small></a></li>
+				    
+				    <li><a href="/categories/algorithm/" class="animsition-link">algorithm<small>(0)</small></a></li>
+				    
+				    <li><a href="/categories/emacs/" class="animsition-link">emacs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/hexo/" class="animsition-link">hexo<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/linux/" class="animsition-link">linux<small>(7)</small></a></li>
+				    
+				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/python3/" class="animsition-link">python3<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/SP/" class="animsition-link">SP<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/UDP/" class="animsition-link">UDP<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/algorithm/" class="animsition-link">algorithm<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/appserver/" class="animsition-link">appserver<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/botnets/" class="animsition-link">botnets<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/coding/" class="animsition-link">coding<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/emacs/" class="animsition-link">emacs<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/ffmpeg/" class="animsition-link">ffmpeg<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/ftp/" class="animsition-link">ftp<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/github/" class="animsition-link">github<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/hexo/" class="animsition-link">hexo<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/lighttpd/" class="animsition-link">lighttpd<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/linux/" class="animsition-link">linux<small>(7)</small></a></li>
+				    
+				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/orgmode/" class="animsition-link">orgmode<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/pow/" class="animsition-link">pow<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/python3/" class="animsition-link">python3<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/rime/" class="animsition-link">rime<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/rootkit/" class="animsition-link">rootkit<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/shell/" class="animsition-link">shell<small>(4)</small></a></li>
+				    
+				    <li><a href="/tags/socket/" class="animsition-link">socket<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="https://vim.rtorr.com/" class="animsition-link">Vim_Cheat_Sheet</a></li>
+                    
+                    <li><a href="https://ss64.com/" class="animsition-link">Shell_Script</a></li>
+                    
+                    <li><a href="https://learnxinyminutes.com/" class="animsition-link">Learn_X_in_Y_Minutes</a></li>
+                    
+                    <li><a href="http://www.netspeak.org/" class="animsition-link">Netspeak</a></li>
+                    
+                    <li><a href="http://gen.lib.rus.ec/" class="animsition-link">Library_Genesis</a></li>
+                    
+                    <li><a href="" class="animsition-link"></a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">This world is a bridge</a></li>
+                            <li><a href="/2017/12/31/Training-Journal/" target="_BLANK" class="animsition-link"><span>Stay </span>Focused</li>
+                            
+                            <li><a href="https://github.com/angry-bird/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://coding.net/u/zuoshi/p/zuoshi/git" title="Coding" target="_blank"><i class="icon-coding"></i></a></li>
+                            
+                            
+                            <li><a href="https://angry-bird.github.io/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://zuoshi.coding.me/zuoshi/" title="CPage" target="_blank"><i class="icon-cpage"></i></a></li>
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-08-25T00:00:00.000Z" itemprop="datePublished">
+          2018-08-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/UDP/'>UDP</a>,
+    
+    <a href='/tags/socket/'>socket</a>,
+    
+    <a href='/tags/python3/'>python3</a>
+    
+    
+</span>
+                <h1>Python3 UDP</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb4962ec">1. socket</a>
+<ul>
+<li><a href="#orgac9f7b5">1.1. Python3 Coding Style</a></li>
+<li><a href="#org6dbbf18">1.2. TCP Client</a></li>
+<li><a href="#org80d072a">1.3. UDP Client</a></li>
+<li><a href="#org00a91b9">1.4. test</a></li>
+<li><a href="#orgd9a6c2b">1.5. UDP Server</a></li>
+</ul>
+</li>
+<li><a href="#orge7ccae8">2. Scan</a>
+<ul>
+<li><a href="#orgb0be668">2.1. class IP</a></li>
+<li><a href="#orge78a3e7">2.2. class ICMP</a></li>
+<li><a href="#org64b9821">2.3. scan.py</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<a id="more"></a>
+
+<p>
+Memos to socket programming in python3.
+</p>
+<div id="outline-container-orgb4962ec" class="outline-2">
+<h2 id="orgb4962ec"><span class="section-number-2">1</span> socket</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Tcp socket is a little different but common and reliable connection.</li>
+<li>Linux must run python as sudo.</li>
+<li>Python3 socket only deal with binary data, must encode user data.</li>
+<li>Host IP must be actual address, not 127.0.0.1.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgac9f7b5" class="outline-3">
+<h3 id="orgac9f7b5"><span class="section-number-3">1.1</span> Python3 Coding Style</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Add this info at head of every <b>filename.py</b>.
+</p>
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*-coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''</span><br><span class="line">| author: demo@demo.com</span><br><span class="line">| date: 08/24/2018</span><br><span class="line">| desc: Learn Socket</span><br><span class="line">| version: 0.1</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org6dbbf18" class="outline-3">
+<h3 id="org6dbbf18"><span class="section-number-3">1.2</span> TCP Client</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">target_host = <span class="string">"www.baidu.com"</span></span><br><span class="line">target_port = <span class="number">80</span></span><br><span class="line"></span><br><span class="line">client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">client.connect((target_host,target_port))</span><br><span class="line">client.send(<span class="string">"GET / HTTP/1.1\r\nHost: baidu.com\r\n\r\n"</span>.encode(<span class="string">'utf-8'</span>))</span><br><span class="line">response = client.recv(<span class="number">4096</span>)</span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org80d072a" class="outline-3">
+<h3 id="org80d072a"><span class="section-number-3">1.3</span> UDP Client</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">host = <span class="string">"192.168.11.113"</span></span><br><span class="line">port = <span class="number">32000</span></span><br><span class="line">udp_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    <span class="comment"># data = 'hello'.encode(encoding='utf-8')</span></span><br><span class="line">    data = input(<span class="string">'&gt;&gt;&gt;'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> data:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    addr = (host, port)</span><br><span class="line"><span class="comment">### Python3 socket only deal with binary data, must encode user data.</span></span><br><span class="line">    udp_client.sendto(data.encode(encoding=<span class="string">'utf-8'</span>), addr)</span><br><span class="line">    print(<span class="string">'Sending: '</span>, addr, data)</span><br><span class="line">    data,addr = udp_client.recvfrom(<span class="number">1024</span>)</span><br><span class="line">    print(<span class="string">'Recv from'</span>, addr, data)</span><br><span class="line"></span><br><span class="line">udp_client.close()</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org00a91b9" class="outline-3">
+<h3 id="org00a91b9"><span class="section-number-3">1.4</span> test</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Must run .py as sudo</span></span><br><span class="line">sudo python udp.py</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9a6c2b" class="outline-3">
+<h3 id="orgd9a6c2b"><span class="section-number-3">1.5</span> UDP Server</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment">### Make sure the host's IP is empty to listen on all IP.</span></span><br><span class="line"><span class="comment">### Or actual IP addr, not 127.0.0.1 which make trouble.</span></span><br><span class="line">ip_port=(<span class="string">''</span>,<span class="number">32000</span>)</span><br><span class="line">BUFSIZE=<span class="number">1024</span></span><br><span class="line">udp_server=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)</span><br><span class="line">udp_server.bind(ip_port)</span><br><span class="line">print(<span class="string">'Waiting for connection...'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    msg,addr=udp_server.recvfrom(BUFSIZE)</span><br><span class="line">    print(<span class="string">'Recv from'</span>, addr, msg)</span><br><span class="line">    udp_server.sendto(msg, addr)</span><br><span class="line">    print(<span class="string">'Send back'</span>, addr, msg)</span><br><span class="line"></span><br><span class="line">udp_server.close()</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge7ccae8" class="outline-2">
+<h2 id="orge7ccae8"><span class="section-number-2">2</span> Scan</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>TCP, UDP, ICMP are IP packets.</li>
+<li>Use struct.unpack network stream to C strings.</li>
+<li>Send UDP packets, and decode ICMP packets.</li>
+</ul>
+</div>
+<div id="outline-container-orgb0be668" class="outline-3">
+<h3 id="orgb0be668"><span class="section-number-3">2.1</span> class IP</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IP</span><span class="params">(ctypes.Structure)</span>:</span></span><br><span class="line">    _fields_ = [</span><br><span class="line">        (<span class="string">'ihl'</span>, ctypes.c_ubyte, <span class="number">4</span>),</span><br><span class="line">        (<span class="string">'ver'</span>, ctypes.c_ubyte, <span class="number">4</span>),</span><br><span class="line">        (<span class="string">'tos'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'len'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'id'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'offset'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'ttl'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'pro'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'sum'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'src'</span>, ctypes.c_uint),</span><br><span class="line">        (<span class="string">'dst'</span>, ctypes.c_uint),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.from_buffer_copy(socket_buffer)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        self.protocol_map = {<span class="number">1</span>:<span class="string">"ICMP"</span>, <span class="number">6</span>:<span class="string">"TCP"</span>, <span class="number">17</span>:<span class="string">"UDP"</span>}</span><br><span class="line">        self.src_addr = socket.inet_ntoa(struct.pack(<span class="string">"&lt;L"</span>,self.src))</span><br><span class="line">        self.dst_addr = socket.inet_ntoa(struct.pack(<span class="string">"&lt;L"</span>,self.dst))</span><br><span class="line">        self.ihlen = self.ihl * <span class="number">4</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.protocol = self.protocol_map[self.pro]</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            self.protocol = str(self.pro)</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orge78a3e7" class="outline-3">
+<h3 id="orge78a3e7"><span class="section-number-3">2.2</span> class ICMP</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ICMP</span><span class="params">(ctypes.Structure)</span>:</span></span><br><span class="line">    _fields_ = [</span><br><span class="line">        (<span class="string">'type'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'code'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'sum'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'id'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'seq'</span>, ctypes.c_ushort),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.from_buffer_copy(socket_buffer)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org64b9821" class="outline-3">
+<h3 id="org64b9821"><span class="section-number-3">2.3</span> scan.py</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*-coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="string">'''</span><br><span class="line">| author: demo@echo.com</span><br><span class="line">| date: 08/24/2018</span><br><span class="line">| desc: UDP tools</span><br><span class="line">| version: 0.1</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"><span class="keyword">import</span> netaddr</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> fcntl</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorTxt</span>:</span></span><br><span class="line">    imp = <span class="string">'\033[1;33m[!]\033[1;m '</span></span><br><span class="line">    err = <span class="string">'\033[1;35m[*]\033[1;m '</span></span><br><span class="line">    que = <span class="string">'\033[1;34m[?]\033[1;m '</span></span><br><span class="line">    ski = <span class="string">'\033[1;31m[-]\033[1;m '</span></span><br><span class="line">    tar = <span class="string">'\033[1;32m[+]\033[1;m '</span></span><br><span class="line">    run = <span class="string">'\033[1;36m[~]\033[1;m '</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IP</span><span class="params">(ctypes.Structure)</span>:</span></span><br><span class="line">    _fields_ = [</span><br><span class="line">        (<span class="string">'ihl'</span>, ctypes.c_ubyte, <span class="number">4</span>),</span><br><span class="line">        (<span class="string">'ver'</span>, ctypes.c_ubyte, <span class="number">4</span>),</span><br><span class="line">        (<span class="string">'tos'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'len'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'id'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'offset'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'ttl'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'pro'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'sum'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'src'</span>, ctypes.c_uint),</span><br><span class="line">        (<span class="string">'dst'</span>, ctypes.c_uint),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.from_buffer_copy(socket_buffer)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        self.protocol_map = {<span class="number">1</span>:<span class="string">"ICMP"</span>, <span class="number">6</span>:<span class="string">"TCP"</span>, <span class="number">17</span>:<span class="string">"UDP"</span>}</span><br><span class="line">        self.src_addr = socket.inet_ntoa(struct.pack(<span class="string">"&lt;L"</span>,self.src))</span><br><span class="line">        self.dst_addr = socket.inet_ntoa(struct.pack(<span class="string">"&lt;L"</span>,self.dst))</span><br><span class="line">        self.ihlen = self.ihl * <span class="number">4</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.protocol = self.protocol_map[self.pro]</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            self.protocol = str(self.pro)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ICMP</span><span class="params">(ctypes.Structure)</span>:</span></span><br><span class="line">    _fields_ = [</span><br><span class="line">        (<span class="string">'type'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'code'</span>, ctypes.c_ubyte),</span><br><span class="line">        (<span class="string">'sum'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'id'</span>, ctypes.c_ushort),</span><br><span class="line">        (<span class="string">'seq'</span>, ctypes.c_ushort),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.from_buffer_copy(socket_buffer)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, socket_buffer)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">HOST = <span class="string">"192.168.11.113"</span></span><br><span class="line">SUBNET = <span class="string">'192.168.11.0/24'</span></span><br><span class="line">MESSAGE = <span class="string">'hello'</span>.encode(encoding=<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">udp_sender</span><span class="params">(SUBNET, MESSAGE)</span>:</span></span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    sender = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">    <span class="keyword">for</span> ip <span class="keyword">in</span> netaddr.IPNetwork(SUBNET):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            sender.sendto(MESSAGE, (<span class="string">"%s"</span> % ip, <span class="number">32000</span>))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> os.name==<span class="string">'nt'</span>:</span><br><span class="line">        socket_protocol = socket.IPPROTO_IP</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        socket_protocol = socket.IPPROTO_ICMP</span><br><span class="line"></span><br><span class="line">    sniffer = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket_protocol)</span><br><span class="line">    sniffer.bind((HOST, <span class="number">0</span>))</span><br><span class="line">    sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> os.name == <span class="string">'nt'</span>:</span><br><span class="line">        sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)</span><br><span class="line"></span><br><span class="line">    t = threading.Thread(target = udp_sender, args = (SUBNET, MESSAGE))</span><br><span class="line">    t.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">            raw_buffer = sniffer.recvfrom(<span class="number">65565</span>)[<span class="number">0</span>]</span><br><span class="line">            ip_header = IP(raw_buffer)</span><br><span class="line"></span><br><span class="line">            buf = raw_buffer[ip_header.ihlen:ip_header.ihlen + ctypes.sizeof(ICMP)]</span><br><span class="line">            icmp_header = ICMP(buf)</span><br><span class="line">            <span class="comment"># print ("[*] Received -&gt; Protocol:%s, Source:%s, TTL:%d, Type:%d, Code:%d" % (ip_header.protocol, ip_header.src_addr, ip_header.ttl, icmp_header.type, icmp_header.code))</span></span><br><span class="line">            <span class="keyword">if</span> icmp_header.code == <span class="number">3</span> <span class="keyword">and</span> icmp_header.type == <span class="number">3</span>:</span><br><span class="line">                <span class="keyword">if</span> netaddr.IPAddress(ip_header.src_addr) <span class="keyword">in</span> netaddr.IPNetwork(SUBNET):</span><br><span class="line">                    <span class="comment"># print(raw_buffer[len(raw_buffer) - len(MESSAGE):])</span></span><br><span class="line">                    <span class="keyword">if</span> raw_buffer[len(raw_buffer) - len(MESSAGE):] == MESSAGE:</span><br><span class="line">                        <span class="keyword">print</span> (<span class="string">'%s%s is up'</span> %  (ColorTxt.tar, ip_header.src_addr))</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">print</span> (<span class="string">'%s%s appears to be up'</span> %  (ColorTxt.tar, ip_header.src_addr))</span><br><span class="line">    <span class="keyword">except</span> KeyboardInterrupt <span class="keyword">as</span> e:</span><br><span class="line">        print(ColorTxt.err, <span class="string">'Quit'</span>)</span><br><span class="line">        <span class="keyword">if</span> os.name == <span class="string">'nt'</span>:</span><br><span class="line">            sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_OFF)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+
+<p class="validation"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/12/09/Training-Journal/" style="float: left;">
+        ← Training Journal
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/02/24/ffmpeg/">
+        ffmpeg →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'angry-bird-github-io';
+	window.addEventListener('load', function(){
+		(function(){
+			var dsq = document.createElement('script');
+			dsq.type = 'text/javascript';
+			dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}());
+	});
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2016<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By zuoshi. All Rights Reserved. <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">; </script> <span id="busuanzi_container_site_uv"> Total Vistors: <span id="busuanzi_value_site_uv"></span>. </span>
+                </p>
+                <p>
+                    Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran. </a>
+                    <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold; color: #767D84" >Coding Pages</a></span>
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/angry-bird/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://coding.net/u/zuoshi/p/zuoshi/git" title="Coding" target="_blank"><i class="icon-coding"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    <li><a href="https://angry-bird.github.io/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
