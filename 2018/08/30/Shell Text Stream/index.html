@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: training | This world is a bridge</title>
+  <title>Shell Text Stream | This world is a bridge</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -61,7 +61,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -264,78 +264,129 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2><span>WELCOME</span>.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>What's Your Plan to Do, with Your One Wild and Precious Life.</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/12/09/Training-Journal/">Training Journal</a></h4>
-                            
-                            <p><time datetime="2018-12-09T00:00:00.000Z"><a href="/2018/12/09/Training-Journal/">2018-12-09</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/10/16/Marathon-Training/">Marathon Training</a></h4>
-                            
-                            <p><time datetime="2017-10-16T00:00:00.000Z"><a href="/2017/10/16/Marathon-Training/">2017-10-16</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-08-30T00:00:00.000Z" itemprop="datePublished">
+          2018-08-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/linux/'>linux</a>,
+    
+    <a href='/tags/shell/'>shell</a>
+    
+    
+</span>
+                <h1>Shell Text Stream</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Your Joy is Your Sorrow Unmasked. -- Kahlil Gibran</p>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org50f4573">1. Query with column in text</a>
+<ul>
+<li><a href="#org4096f5b">1.1. Preprocess of text</a></li>
+<li><a href="#org08f0401">1.2. Query IP GeoLocation</a></li>
+<li><a href="#org3dad054">1.3. Query MAC Vendor</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<a id="more"></a>
+
+<p>
+Deal text with sort, tail, head, cut, diff, grep, sed, awk.
+</p>
+
+<div id="outline-container-org50f4573" class="outline-2">
+<h2 id="org50f4573"><span class="section-number-2">1</span> Query with column in text</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4096f5b" class="outline-3">
+<h3 id="org4096f5b"><span class="section-number-3">1.1</span> Preprocess of text</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk -F <span class="string">'[@-]'</span> <span class="string">'/@gmail.com/{print $1,$3}'</span> access.log | awk -F <span class="string">'[[/=]'</span> <span class="string">'{print $1, $NF}'</span>&gt;ip_user.txt | sort -V | uniq -c &gt; ip_user_sort.txt</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org08f0401" class="outline-3">
+<h3 id="org08f0401"><span class="section-number-3">1.2</span> Query IP GeoLocation</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Default delimiter is blankspace.</span></span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP\n---"} {print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP"; print "---"} {print $1} END {print "---"}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define another delimiter with -f 'x'.</span></span><br><span class="line">awk -F <span class="string">':'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk -F: <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">###</span></span><br><span class="line">awk -F <span class="string">'[::]'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Default action is print the line.</span></span><br><span class="line">awk -F: <span class="string">'/root/'</span> /etc/passwd</span><br><span class="line">awk -F: <span class="string">'/root/{print $1}'</span> /etc/passwd</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+<div id="outline-container-org758472e" class="outline-4">
+<h4 id="org758472e">Detect Private IP</h4>
+<div class="outline-text-4" id="text-org758472e">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3dad054" class="outline-3">
+<h3 id="org3dad054"><span class="section-number-3">1.3</span> Query MAC Vendor</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+
+<p class="validation"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/12/09/Training-Journal/" style="float: left;">
+        ← Training Journal
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/08/25/Python3-UDP/">
+        Python3 UDP →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'angry-bird-github-io';
+	window.addEventListener('load', function(){
+		(function(){
+			var dsq = document.createElement('script');
+			dsq.type = 'text/javascript';
+			dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}());
+	});
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
