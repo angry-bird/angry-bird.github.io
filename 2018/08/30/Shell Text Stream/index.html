@@ -292,11 +292,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0afa2c3">1. Query with column in text</a>
+<li><a href="#orgf7517e1">1. Query with column in text</a>
 <ul>
-<li><a href="#org24c6aea">1.1. Preprocess of text</a></li>
-<li><a href="#org258bd43">1.2. Query IP GeoLocation</a></li>
-<li><a href="#org70c3bc6">1.3. Query MAC Vendor</a></li>
+<li><a href="#org7dbbdca">1.1. Preprocess of text</a></li>
+<li><a href="#org0ebf728">1.2. Query IP GeoLocation</a></li>
+<li><a href="#org61006d9">1.3. Query MAC Vendor</a></li>
 </ul>
 </li>
 </ul>
@@ -308,52 +308,52 @@
 Deal text with sort, tail, head, cut, diff, grep, sed, awk.
 </p>
 
-<div id="outline-container-org0afa2c3" class="outline-2">
-<h2 id="org0afa2c3"><span class="section-number-2">1</span> Query with column in text</h2>
+<div id="outline-container-orgf7517e1" class="outline-2">
+<h2 id="orgf7517e1"><span class="section-number-2">1</span> Query with column in text</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org24c6aea" class="outline-3">
-<h3 id="org24c6aea"><span class="section-number-3">1.1</span> Preprocess of text</h3>
+<div id="outline-container-org7dbbdca" class="outline-3">
+<h3 id="org7dbbdca"><span class="section-number-3">1.1</span> Preprocess of text</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk -F <span class="string">'[@-]'</span> <span class="string">'/@gmail.com/{print $1,$3}'</span> access.log | awk -F <span class="string">'[[/=]'</span> <span class="string">'{print $1, $NF}'</span>&gt;ip_user.txt | sort -V | uniq -c &gt; ip_user_sort.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org258bd43" class="outline-3">
-<h3 id="org258bd43"><span class="section-number-3">1.2</span> Query IP GeoLocation</h3>
+<div id="outline-container-org0ebf728" class="outline-3">
+<h3 id="org0ebf728"><span class="section-number-3">1.2</span> Query IP GeoLocation</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org27c9bf6" class="outline-4">
-<h4 id="org27c9bf6">awk</h4>
-<div class="outline-text-4" id="text-org27c9bf6">
+<div id="outline-container-org5189f14" class="outline-4">
+<h4 id="org5189f14">awk</h4>
+<div class="outline-text-4" id="text-org5189f14">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Default delimiter is blankspace.</span></span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt | tee ip.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP\n---"} {print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP"; print "---"} {print $1} END {print "---"}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define another delimiter with -f 'x'.</span></span><br><span class="line">awk -F <span class="string">':'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk -F: <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define multiple delimiters</span></span><br><span class="line">awk -F <span class="string">'[:@ /t]'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Match strings</span></span><br><span class="line">awk -F: <span class="string">'/root/'</span> /etc/passwd</span><br><span class="line">awk -F: <span class="string">'/root/{print $1}'</span> /etc/passwd</span><br><span class="line"><span class="comment">### Define string delimiter</span></span><br><span class="line">awk <span class="string">'$1~/^(12)/{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Print matched lines, and set $3</span></span><br><span class="line">awk <span class="string">'$2=="gmail.com"{$3="gg"; print $1$3}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Print all lines, and set $3</span></span><br><span class="line">awk <span class="string">'$2=="gmail.com"{$3="gg"}{print $1$3}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org6d7a2f0" class="outline-4">
-<h4 id="org6d7a2f0">Detect Private IP</h4>
-<div class="outline-text-4" id="text-org6d7a2f0">
+<div id="outline-container-org8dea622" class="outline-4">
+<h4 id="org8dea622">Detect Private IP</h4>
+<div class="outline-text-4" id="text-org8dea622">
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Print Lan IP</span></span><br><span class="line">awk <span class="string">'$1~/^(10\.|192\.168|127\.0)/{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Skip Lan IP</span></span><br><span class="line">awk <span class="string">'$1~/^(10\.|192\.168|127\.0)/{print $1}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Print Lan IP</span></span><br><span class="line">awk <span class="string">'$1~/^(10\.|192\.168|127\.0)/{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Skip Lan IP</span></span><br><span class="line">awk <span class="string">'$1!~/^(10\.|192\.168|127)/{print $1}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org0052e46" class="outline-4">
-<h4 id="org0052e46">Curl</h4>
-<div class="outline-text-4" id="text-org0052e46">
+<div id="outline-container-org2b85a78" class="outline-4">
+<h4 id="org2b85a78">Curl</h4>
+<div class="outline-text-4" id="text-org2b85a78">
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl http://ip-api.com/json/<span class="number">102.34</span>.<span class="number">12.51</span></span><br><span class="line">curl https://ipapi.co/<span class="number">102.34</span>.<span class="number">12.51</span>/json</span><br><span class="line">curl https://ip.cn/index.php?ip=<span class="number">102.34</span>.<span class="number">12.51</span></span><br><span class="line">sleep <span class="number">0.1</span></span><br><span class="line">awk <span class="string">'$1!~/^(10\.|192\.168|127)/{system("curl http://ip-api.com/json/"$1); sleep 0.1}'</span> hosts.txt | tee iploc.txt</span><br><span class="line">awk <span class="string">'$1!~/^(10\.|192\.168|127)/{system("curl https://ipapi.co/$1/json"); sleep 0.1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'$1!~/^(10\.|192\.168|127)/{system("curl https://ip.cn/index.php?ip="$1); sleep 0.1}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org70c3bc6" class="outline-3">
-<h3 id="org70c3bc6"><span class="section-number-3">1.3</span> Query MAC Vendor</h3>
+<div id="outline-container-org61006d9" class="outline-3">
+<h3 id="org61006d9"><span class="section-number-3">1.3</span> Query MAC Vendor</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl https://api.macvendors.com/<span class="number">64</span>:<span class="number">76</span>:ba:a6:fe:<span class="number">4</span>a</span><br><span class="line">curl http://macvendors.co/api/<span class="number">64</span>:<span class="number">76</span>:ba:a6:fe:<span class="number">4</span>a</span><br><span class="line">curl http://macvendors.co/api/<span class="number">64</span>:<span class="number">76</span>:ba:a6:fe:<span class="number">4</span>a/pipe</span><br><span class="line">arp <span class="operator">-a</span> | awk -F <span class="string">'[() ]'</span> <span class="string">'$0!~/^(\?)/{print $6}'</span></span><br><span class="line">arp <span class="operator">-a</span> | awk -F <span class="string">'[() ]'</span> <span class="string">'$0!~/^(\?)/{system("curl https://api.macvendors.com/"$6); sleep 0.1}'</span></span><br><span class="line">arp <span class="operator">-a</span> | awk -F <span class="string">'[() ]'</span> <span class="string">'$0!~/^(\?)/{system("curl http://macvendors.co/api/vendorname/"$6); sleep 0.1}'</span></span><br><span class="line">arp <span class="operator">-a</span> | awk -F <span class="string">'[() ]'</span> <span class="string">'$0!~/^(\?)/{system("curl http://macvendors.co/api/"$6); sleep 0.1}'</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
