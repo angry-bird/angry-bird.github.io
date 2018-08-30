@@ -292,11 +292,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org50f4573">1. Query with column in text</a>
+<li><a href="#org0afa2c3">1. Query with column in text</a>
 <ul>
-<li><a href="#org4096f5b">1.1. Preprocess of text</a></li>
-<li><a href="#org08f0401">1.2. Query IP GeoLocation</a></li>
-<li><a href="#org3dad054">1.3. Query MAC Vendor</a></li>
+<li><a href="#org24c6aea">1.1. Preprocess of text</a></li>
+<li><a href="#org258bd43">1.2. Query IP GeoLocation</a></li>
+<li><a href="#org70c3bc6">1.3. Query MAC Vendor</a></li>
 </ul>
 </li>
 </ul>
@@ -308,36 +308,49 @@
 Deal text with sort, tail, head, cut, diff, grep, sed, awk.
 </p>
 
-<div id="outline-container-org50f4573" class="outline-2">
-<h2 id="org50f4573"><span class="section-number-2">1</span> Query with column in text</h2>
+<div id="outline-container-org0afa2c3" class="outline-2">
+<h2 id="org0afa2c3"><span class="section-number-2">1</span> Query with column in text</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4096f5b" class="outline-3">
-<h3 id="org4096f5b"><span class="section-number-3">1.1</span> Preprocess of text</h3>
+<div id="outline-container-org24c6aea" class="outline-3">
+<h3 id="org24c6aea"><span class="section-number-3">1.1</span> Preprocess of text</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk -F <span class="string">'[@-]'</span> <span class="string">'/@gmail.com/{print $1,$3}'</span> access.log | awk -F <span class="string">'[[/=]'</span> <span class="string">'{print $1, $NF}'</span>&gt;ip_user.txt | sort -V | uniq -c &gt; ip_user_sort.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org08f0401" class="outline-3">
-<h3 id="org08f0401"><span class="section-number-3">1.2</span> Query IP GeoLocation</h3>
+<div id="outline-container-org258bd43" class="outline-3">
+<h3 id="org258bd43"><span class="section-number-3">1.2</span> Query IP GeoLocation</h3>
 <div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org27c9bf6" class="outline-4">
+<h4 id="org27c9bf6">awk</h4>
+<div class="outline-text-4" id="text-org27c9bf6">
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Default delimiter is blankspace.</span></span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP\n---"} {print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP"; print "---"} {print $1} END {print "---"}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define another delimiter with -f 'x'.</span></span><br><span class="line">awk -F <span class="string">':'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk -F: <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">###</span></span><br><span class="line">awk -F <span class="string">'[::]'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Default action is print the line.</span></span><br><span class="line">awk -F: <span class="string">'/root/'</span> /etc/passwd</span><br><span class="line">awk -F: <span class="string">'/root/{print $1}'</span> /etc/passwd</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Default delimiter is blankspace.</span></span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'{print $1}'</span> hosts.txt | tee ip.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP\n---"} {print $1}'</span> hosts.txt</span><br><span class="line">awk <span class="string">'BEGIN {print "IP"; print "---"} {print $1} END {print "---"}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define another delimiter with -f 'x'.</span></span><br><span class="line">awk -F <span class="string">':'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line">awk -F: <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Define multiple delimiters</span></span><br><span class="line">awk -F <span class="string">'[:@ /t]'</span> <span class="string">'{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">### Match strings</span></span><br><span class="line">awk -F: <span class="string">'/root/'</span> /etc/passwd</span><br><span class="line">awk -F: <span class="string">'/root/{print $1}'</span> /etc/passwd</span><br><span class="line"><span class="comment">### Define string delimiter</span></span><br><span class="line">awk <span class="string">'$1~/^(12)/{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Print matched lines, and set $3</span></span><br><span class="line">awk <span class="string">'$2=="gmail.com"{$3="gg"; print $1$3}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Print all lines, and set $3</span></span><br><span class="line">awk <span class="string">'$2=="gmail.com"{$3="gg"}{print $1$3}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
 </div>
 </div>
-<div id="outline-container-org758472e" class="outline-4">
-<h4 id="org758472e">Detect Private IP</h4>
-<div class="outline-text-4" id="text-org758472e">
+</div>
+<div id="outline-container-org6d7a2f0" class="outline-4">
+<h4 id="org6d7a2f0">Detect Private IP</h4>
+<div class="outline-text-4" id="text-org6d7a2f0">
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Print Lan IP</span></span><br><span class="line">awk <span class="string">'$1~/^(10\.|192\.168|127\.0)/{print $1}'</span> hosts.txt</span><br><span class="line"><span class="comment">## Skip Lan IP</span></span><br><span class="line">awk <span class="string">'$1~/^(10\.|192\.168|127\.0)/{print $1}'</span> hosts.txt</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org0052e46" class="outline-4">
+<h4 id="org0052e46">Curl</h4>
+<div class="outline-text-4" id="text-org0052e46">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org3dad054" class="outline-3">
-<h3 id="org3dad054"><span class="section-number-3">1.3</span> Query MAC Vendor</h3>
+<div id="outline-container-org70c3bc6" class="outline-3">
+<h3 id="org70c3bc6"><span class="section-number-3">1.3</span> Query MAC Vendor</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
