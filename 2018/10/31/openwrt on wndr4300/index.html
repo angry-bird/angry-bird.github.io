@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>openwrt on wndr4300 | This world is a bridge</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="This world is a bridge">
+    <meta name="author" content="zuoshi">
+    <meta name="description" content="One wild and precious life" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="This world is a bridge" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close">
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">live in emacs</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">kali</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/SP/" class="animsition-link">SP<small>(0)</small></a></li>
+				    
+				    <li><a href="/categories/algorithm/" class="animsition-link">algorithm<small>(0)</small></a></li>
+				    
+				    <li><a href="/categories/emacs/" class="animsition-link">emacs<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/hexo/" class="animsition-link">hexo<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/kindle/" class="animsition-link">kindle<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/linux/" class="animsition-link">linux<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/macos/" class="animsition-link">macos<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/osx/" class="animsition-link">osx<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/python/" class="animsition-link">python<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/python3/" class="animsition-link">python3<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/GAE/" class="animsition-link">GAE<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/SP/" class="animsition-link">SP<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/UDP/" class="animsition-link">UDP<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/algorithm/" class="animsition-link">algorithm<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/appserver/" class="animsition-link">appserver<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/botnets/" class="animsition-link">botnets<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/cli/" class="animsition-link">cli<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/coding/" class="animsition-link">coding<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/commands/" class="animsition-link">commands<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/crawler/" class="animsition-link">crawler<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/emacs/" class="animsition-link">emacs<small>(3)</small></a></li>
+				    
+				    <li><a href="/tags/ffmpeg/" class="animsition-link">ffmpeg<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/ftp/" class="animsition-link">ftp<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/github/" class="animsition-link">github<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/hackintosh/" class="animsition-link">hackintosh<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/hexo/" class="animsition-link">hexo<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/js/" class="animsition-link">js<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/karabiner/" class="animsition-link">karabiner<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/keymodifier/" class="animsition-link">keymodifier<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/kindle/" class="animsition-link">kindle<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/lighttpd/" class="animsition-link">lighttpd<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/linux/" class="animsition-link">linux<small>(10)</small></a></li>
+				    
+				    <li><a href="/tags/macos/" class="animsition-link">macos<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/malware/" class="animsition-link">malware<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/marathon/" class="animsition-link">marathon<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/netgear/" class="animsition-link">netgear<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/odoo/" class="animsition-link">odoo<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/openwrt/" class="animsition-link">openwrt<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/orgmode/" class="animsition-link">orgmode<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/osx/" class="animsition-link">osx<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/pow/" class="animsition-link">pow<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/python/" class="animsition-link">python<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/python3/" class="animsition-link">python3<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/rar/" class="animsition-link">rar<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/rime/" class="animsition-link">rime<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/rootkit/" class="animsition-link">rootkit<small>(0)</small></a></li>
+				    
+				    <li><a href="/tags/server/" class="animsition-link">server<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/shell/" class="animsition-link">shell<small>(5)</small></a></li>
+				    
+				    <li><a href="/tags/socket/" class="animsition-link">socket<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/spacemacs/" class="animsition-link">spacemacs<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/training/" class="animsition-link">training<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/yasnippet/" class="animsition-link">yasnippet<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="https://vim.rtorr.com/" class="animsition-link">Vim_Cheat_Sheet</a></li>
+                    
+                    <li><a href="https://ss64.com/" class="animsition-link">Shell_Script</a></li>
+                    
+                    <li><a href="https://learnxinyminutes.com/" class="animsition-link">Learn_X_in_Y_Minutes</a></li>
+                    
+                    <li><a href="http://www.netspeak.org/" class="animsition-link">Netspeak</a></li>
+                    
+                    <li><a href="http://gen.lib.rus.ec/" class="animsition-link">Library_Genesis</a></li>
+                    
+                    <li><a href="" class="animsition-link"></a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">This world is a bridge</a></li>
+                            <li><a href="/2017/12/31/Training-Journal/" target="_BLANK" class="animsition-link"><span>Stay </span>Focused</a></li>
+                            
+                            <li><a href="https://github.com/angry-bird/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://coding.net/u/zuoshi/p/zuoshi/git" title="Coding" target="_blank"><i class="icon-coding"></i></a></li>
+                            
+                            
+                            <li><a href="https://angry-bird.github.io/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://zuoshi.coding.me/zuoshi/" title="CPage" target="_blank"><i class="icon-cpage"></i></a></li>
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+</div>
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-10-31T00:00:00.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href="/tags/linux/">linux</a>,
+    
+    <a href="/tags/openwrt/">openwrt</a>,
+    
+    <a href="/tags/netgear/">netgear</a>
+    
+    
+</span>
+                <h1>openwrt on wndr4300</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org49553f7">1. Prep</a></li>
+<li><a href="#orgdae4aad">2. Image Release</a></li>
+<li><a href="#orgf95dcb1">3. Signal Strength</a></li>
+<li><a href="#org737ed7c">4. Packages</a>
+<ul>
+<li><a href="#org872068a">4.1. usb storage</a></li>
+<li><a href="#org5c01837">4.2. koolproxy</a></li>
+<li><a href="#orgbed0b79">4.3. frp</a></li>
+<li><a href="#org3fd5870">4.4. shadowsocksR</a></li>
+<li><a href="#org2555285">4.5. aria2</a></li>
+</ul>
+</li>
+<li><a href="#orgd6a88aa">5. Compile with SDK</a>
+<ul>
+<li><a href="#org3b09bfe">5.1. prepare</a></li>
+<li><a href="#org3620ffa">5.2. shadowsocksR-libev for OpenWrt</a></li>
+<li><a href="#orgc110d86">5.3. aria2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<a id="more"></a>
+
+<p>
+So I want to install OpenWrt on Netgear WNDR4300.
+</p>
+
+<p>
+Currently, stable release is 18.06.1 which is merged with LEDE.
+</p>
+
+<p>
+After days of trial, I stick to 17.01.4 which can run ssr and other cool packages.
+</p>
+<div id="outline-container-org49553f7" class="outline-2">
+<h2 id="org49553f7"><span class="section-number-2">1</span> Prep</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+If the device can run a shell, gather device info by these commands.
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh user@router.ip</span><br><span class="line">uname -a</span><br><span class="line">cat /proc/cpuinfo</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdae4aad" class="outline-2">
+<h2 id="orgdae4aad"><span class="section-number-2">2</span> Image Release</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+It&apos;s recommanded to read <a href="https://openwrt.org/docs/guide-quick-start/begin_here" target="_blank" rel="noopener">start guide</a> first, then download the appropriate image file.
+</p>
+
+
+<p>
+First-time installation on a device, or flashing openwrt firmware, choose the <code>factory install</code> <a href="https://archive.openwrt.org/releases/18.06.1/targets/ar71xx/nand/openwrt-18.06.1-ar71xx-nand-wndr4300-ubi-factory.img" target="_blank" rel="noopener">wndr4300 image</a>.<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tftp 192.168.1.1</span><br><span class="line">binary</span><br><span class="line">put lede-17.01.4-ar71xx-nand-wndr4300-ubi-factory.img</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+Sysupgrading an existing openwrt device on it&apos;s web admin GUI, choose <a href="https://archive.openwrt.org/releases/18.06.1/targets/ar71xx/nand/openwrt-18.06.1-ar71xx-nand-wndr4300-squashfs-sysupgrade.tar" target="_blank" rel="noopener">wndr4300 system upgrade file</a>.
+Compileing package with corresponding openwrt device&apos;s SDK file, choose <a href="https://archive.openwrt.org/releases/18.06.1/targets/ar71xx/nand/openwrt-sdk-18.06.1-ar71xx-nand_gcc-7.3.0_musl.Linux-x86_64.tar.xz" target="_blank" rel="noopener">ar71xx SDK</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf95dcb1" class="outline-2">
+<h2 id="orgf95dcb1"><span class="section-number-2">3</span> Signal Strength</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Choose <code>Country</code> as <code>US</code>, which has <i>unlimited</i> <code>Transmit Power</code>.</li>
+<li><code>Operating frequency</code> is another key parameter, relay radio will inherit the BSSID&apos;s <code>mode</code>, <code>channel</code> and <code>width</code>.</li>
+<li><code>Frequency Width</code> may halve and will cause channel&apos;s <code>Bitrate</code> halving too.</li>
+<li>2.4GHz &#x2013; 20/40MHz, 5GHz &#x2013; 20/40/80MHz</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org737ed7c" class="outline-2">
+<h2 id="org737ed7c"><span class="section-number-2">4</span> Packages</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+On openwrt 18.06.1, wndr4300 only has 13.71MB space to install packages, on LEDE 17.01.4, only has 13.9MB space.
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+<div id="outline-container-org872068a" class="outline-3">
+<h3 id="org872068a"><span class="section-number-3">4.1</span> usb storage</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install kmod-fs-ext4 kmod-fs-btrfs block-mount kmod-usb-storage blkid hd-idle</span><br><span class="line"><span class="comment">### samba can install in 18.06.1</span></span><br><span class="line">opkg install luci-app-samba</span><br><span class="line"><span class="comment">### There&apos;s an error in 17.01.4, but still works</span></span><br><span class="line">/etc/init.d/samba <span class="built_in">enable</span></span><br><span class="line">/etc/init.d/samba restart</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c01837" class="outline-3">
+<h3 id="org5c01837"><span class="section-number-3">4.2</span> <a href="https://koolproxy.io/docs/installation" target="_blank" rel="noopener">koolproxy</a></h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo</span><br><span class="line">opkg install --force-depends http://firmware.koolshare.cn/binary/KoolProxy/ar71xx/koolproxy_3.<span class="number">7</span>.<span class="number">2</span>-<span class="number">20180127</span>_mips_24kc.ipk</span><br></pre></td></tr></table></figure>
+</div>
+<p>
+koolproxy may cause http website unavailable.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbed0b79" class="outline-3">
+<h3 id="orgbed0b79"><span class="section-number-3">4.3</span> frp</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp frpc.tar.xz root@192.168.1.1:/root</span><br><span class="line">ln -s /tmp/frpc /usr/bin/frpc</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+Add to startup, or /etc/init.d/frpc, or /etc/rc.common, or /etc/rc.local
+</p>
+
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -xJf /root/frpc.tar.xz -C /tmp</span><br><span class="line">frpc -c /root/frpc.ini &amp;</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+Remember to write this conf file, or sleep 10 seconds before start frpc.
+</p>
+<div class="org-src-container">
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> =  vps_ip</span><br><span class="line"><span class="attr">server_port</span> = vps_port</span><br><span class="line"><span class="attr">token</span> = password</span><br><span class="line"><span class="attr">login_fail_exit</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">log_file</span> = /tmp/frpc.log</span><br><span class="line"></span><br><span class="line"><span class="section">[lede]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">80</span></span><br><span class="line"><span class="attr">subdomain</span> = lede</span><br><span class="line"></span><br><span class="line"><span class="section">[aria2]</span></span><br><span class="line"><span class="attr">type</span> = http</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">6800</span></span><br><span class="line"><span class="attr">subdomain</span> = aria2</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-org3fd5870" class="outline-3">
+<h3 id="org3fd5870"><span class="section-number-3">4.4</span> shadowsocksR</h3>
+<div class="outline-text-3" id="text-4-4">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scp ~/Downloads/luci-app-shaodwsocksR*_all.ipk root@192.168.1.1:/tmp/</span><br><span class="line">opkg update</span><br><span class="line">opkg remove dnsmasq</span><br><span class="line">mv /etc/dnsmasq.conf /etc/dnsmasq.conf.o</span><br><span class="line">mv /etc/config/dhcp /etc/config/dncp.o</span><br><span class="line">opkg install luci-app-shadowsocksR-GFW_1.2.1_all.ipk</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+If dnsmasq running but not working, check /etc/config/network.
+</p>
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">config interface &apos;wan&apos;</span><br><span class="line">  option proto &apos;dhcp&apos;</span><br><span class="line">  option ifname &apos;eth0&apos;</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+If GFW not working, add a line to /etc/dnsmasq.conf
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> conf-dir=/etc/dnsmasq.ssr &gt;&gt; /etc/dnsmasq.conf</span><br><span class="line">/etc/init.d/dnsmasq restart</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>
+/etc/china_ssr.txt
+/etc/dnsmasq.ssr/gfw_list.conf
+</p>
+</div>
+</div>
+<div id="outline-container-org2555285" class="outline-3">
+<h3 id="org2555285"><span class="section-number-3">4.5</span> aria2</h3>
+<div class="outline-text-3" id="text-4-5">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install aria2_1.34.0-1_mips_24kc.ipk</span><br><span class="line">opkg install luci-app-aria2</span><br><span class="line">aria2c --conf-path=/home/aria2/aria2.conf -D</span><br></pre></td></tr></table></figure>
+</div>
+
+<div class="org-src-container">
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enable-rpc</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">rpc-allow-origin-all</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">rpc-listen-all</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">quiet</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">continue</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">input-file</span>=/home/aria2/aria2.session</span><br><span class="line"><span class="attr">save-session</span>=/home/aria2/aria2.session</span><br><span class="line"><span class="attr">dht-file-path</span>=/home/aria2/dht.dat</span><br><span class="line"><span class="attr">log</span>=/home/aria2/aria2.log</span><br><span class="line"><span class="attr">file-allocation</span>=prealloc</span><br><span class="line"><span class="attr">bt-enable-lpd</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">enable-dht</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">rpc-listen-port</span>=<span class="number">6800</span></span><br><span class="line"><span class="attr">dir</span>=/home/tmp/inbox</span><br><span class="line"><span class="attr">disk-cache</span>=<span class="number">4</span>M</span><br><span class="line"><span class="attr">max-overall-download-limit</span>=<span class="number">0</span></span><br><span class="line"><span class="attr">max-overall-upload-limit</span>=<span class="number">90</span>K</span><br><span class="line"><span class="attr">max-concurrent-downloads</span>=<span class="number">3</span></span><br><span class="line"><span class="attr">max-connection-per-server</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">min-split-size</span>=<span class="number">20</span>M</span><br><span class="line"><span class="attr">split</span>=<span class="number">5</span></span><br><span class="line"><span class="attr">save-session-interval</span>=<span class="number">30</span></span><br><span class="line"><span class="attr">follow-torrent</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">listen-port</span>=<span class="number">6881</span>-<span class="number">6999</span></span><br><span class="line"><span class="attr">bt-max-peers</span>=<span class="number">55</span></span><br><span class="line"><span class="attr">user-agent</span>=Mozilla/<span class="number">5.0</span> (X11; Linux x<span class="number">86_64</span>) AppleWebKit/<span class="number">537.36</span> (KHTML, like Gecko) Chrome/<span class="number">63.0</span>.<span class="number">3239.132</span> Safari/<span class="number">537.36</span></span><br><span class="line"><span class="attr">rpc-secret</span>=yourtoken</span><br><span class="line"><span class="attr">log-level</span>=error</span><br><span class="line"><span class="attr">check-certificate</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">lowest-speed-limit</span>=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6a88aa" class="outline-2">
+<h2 id="orgd6a88aa"><span class="section-number-2">5</span> Compile with SDK</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org3b09bfe" class="outline-3">
+<h3 id="org3b09bfe"><span class="section-number-3">5.1</span> prepare</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li><p>
+Choose Ubuntu 16.04 x64 to compile
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gawk libncurses5-dev libz-dev zlib1g-dev git ccache</span><br></pre></td></tr></table></figure>
+</div></li>
+<li><p>
+Download corresponding SDK
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget https://archive.openwrt.org/releases/17.01.4/targets/ar71xx/nand/lede-sdk-17.01.4-ar71xx-nand_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz</span><br><span class="line">xd -d lede-sdk-17.01.4-ar71xx-nand_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz</span><br><span class="line">tar -xf lede-sdk-17.01.4-ar71xx-nand_gcc-5.4.0_musl-1.1.16.Linux-x86_64</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> OpenWrt-SDK-*</span><br><span class="line"><span class="comment">### Update packages, may not necessary.</span></span><br><span class="line">./scripts/feeds update</span><br><span class="line">./scripts/feeds update packages base luci routing telephony</span><br><span class="line">./scripts/feeds install libpcre zlib libopenssl</span><br></pre></td></tr></table></figure>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3620ffa" class="outline-3">
+<h3 id="org3620ffa"><span class="section-number-3">5.2</span> shadowsocksR-libev for OpenWrt<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></h3>
+<div class="outline-text-3" id="text-5-2">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ywb94/openwrt-ssr.git package/openwrt-ssr</span><br><span class="line"><span class="comment">### Choose in menu</span></span><br><span class="line"><span class="comment"># luci -&gt;3. Applications-&gt; luci-app-shadowsocksR         origin ver</span></span><br><span class="line"><span class="comment"># luci -&gt;3. Applications-&gt; luci-app-shadowsocksR-GFW     GFWList ver</span></span><br><span class="line">make menuconfig</span><br><span class="line"><span class="built_in">pushd</span> package/openwrt-ssr/tools/po2lmo</span><br><span class="line">make &amp;&amp; sudo make install</span><br><span class="line"><span class="built_in">popd</span></span><br><span class="line"><span class="comment"># po2lmo ./package/openwrt-ssr/files/luci/i18n/shadowsocksr.zh-cn.po ./package/openwrt-ssr/files/luci/i18n/shadowsocksr.zh-cn.lmo</span></span><br><span class="line"></span><br><span class="line">make package/openwrt-ssr/compile V=99</span><br><span class="line">ls bin/packages/mips_24kc/base/</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc110d86" class="outline-3">
+<h3 id="orgc110d86"><span class="section-number-3">5.3</span> aria2</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Openwrt official aria2 package is outdated, so install another compiled version.</span></span><br><span class="line">opkg install aria2</span><br><span class="line"><span class="comment">### compile own ipk</span></span><br><span class="line"><span class="built_in">cd</span> openwrt/lede*</span><br><span class="line"><span class="built_in">export</span> LC_ALL=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">./scripts/feeds install aria2</span><br><span class="line">vi package/feeds/packages/aria2/Makefile</span><br><span class="line">cp package/feeds/packages/aria2/Makefile aria2.makefile</span><br><span class="line"><span class="comment">### change PKG_VERSION to 1.34.0, and md5 to 2c21fb1b154f828ae179b03fd368c42d</span></span><br><span class="line">make menuconfig</span><br><span class="line"><span class="comment">### Network -&gt; File Transfers -&gt; aria2 configuration,</span></span><br><span class="line"><span class="comment">### Select magnet, bit torrent... or vi .config</span></span><br><span class="line">CONFIG_PACKAGE_aria2=y</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Aria2 Configuration</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">CONFIG_ARIA2_OPENSSL=y</span><br><span class="line"><span class="comment"># CONFIG_ARIA2_GNUTLS is not set</span></span><br><span class="line"><span class="comment"># CONFIG_ARIA2_NOSSL is not set</span></span><br><span class="line">CONFIG_ARIA2_BITTORRENT=y</span><br><span class="line"><span class="comment"># CONFIG_ARIA2_SFTP is not set</span></span><br><span class="line"><span class="comment"># CONFIG_ARIA2_ASYNC_DNS is not set</span></span><br><span class="line"><span class="comment"># CONFIG_ARIA2_COOKIE is not set</span></span><br><span class="line">CONFIG_ARIA2_METALINK=y</span><br><span class="line">CONFIG_ARIA2_LIBXML2=y</span><br><span class="line"></span><br><span class="line">make package/aria2/download -j8 V=s</span><br><span class="line">make package/aria2/prepare -j8 V=s</span><br><span class="line">make package/aria2/compile -j8 V=s</span><br><span class="line">ls bin/packages/mips_24kc/packages/</span><br><span class="line">mv bin/packages/mips_24kc/packages/aria2_1.34.0-1_mips_24kc.ipk ~/</span><br><span class="line">scp eula.edu:aria2_1.34.0-1_mips_24kc.ipk ./</span><br><span class="line">scp ./aria2_1.34.0-1_mips_24kc.ipk root@192.168.1.1:/tmp/</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://github.com/softwaredownload/openwrt-fanqiang/blob/master/ebook/wndr4300/5.wndr4300-flash-fanqiang-img.md" target="_blank" rel="noopener">https://github.com/softwaredownload/openwrt-fanqiang/blob/master/ebook/wndr4300/5.wndr4300-flash-fanqiang-img.md</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://github.com/daiaji/openwrt-ssr" target="_blank" rel="noopener">https://github.com/daiaji/openwrt-ssr</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/11/18/hackintosh on thinkpad T440P/" style="float: left;">
+        ← hackintosh on thinkpad T440P
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/09/14/rar/">
+        rar command line →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'angry-bird-github-io';
+	window.addEventListener('load', function(){
+		(function(){
+			var dsq = document.createElement('script');
+			dsq.type = 'text/javascript';
+			dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}());
+	});
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2016<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By zuoshi. All Rights Reserved. <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">; </script> <span id="busuanzi_container_site_uv"> Total Vistors: <span id="busuanzi_value_site_uv"></span>. </span>
+                </p>
+                <p>
+                    Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran. </a>
+                    <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold; color: #767D84">Coding Pages</a></span>
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/angry-bird/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://coding.net/u/zuoshi/p/zuoshi/git" title="Coding" target="_blank"><i class="icon-coding"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    <li><a href="https://angry-bird.github.io/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
