@@ -111,7 +111,7 @@
 				    
 				    <li><a href="/categories/osx/" class="animsition-link">osx<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/python/" class="animsition-link">python<small>(1)</small></a></li>
+				    <li><a href="/categories/python/" class="animsition-link">python<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/python3/" class="animsition-link">python3<small>(1)</small></a></li>
 				    
@@ -191,7 +191,7 @@
 				    
 				    <li><a href="/tags/python/" class="animsition-link">python<small>(1)</small></a></li>
 				    
-				    <li><a href="/tags/python3/" class="animsition-link">python3<small>(1)</small></a></li>
+				    <li><a href="/tags/python3/" class="animsition-link">python3<small>(2)</small></a></li>
 				    
 				    <li><a href="/tags/rar/" class="animsition-link">rar<small>(1)</small></a></li>
 				    
@@ -331,29 +331,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org522d007">1. Basic</a></li>
-<li><a href="#org84882be">2. SSR server</a>
+<li><a href="#orgbde96a6">1. Basic</a></li>
+<li><a href="#org3eec1c5">2. SSR server</a>
 <ul>
-<li><a href="#orga0e5d05">2.1. speed benchmark</a></li>
-<li><a href="#org28ee0aa">2.2. bbr</a></li>
-<li><a href="#orgfa9d306">2.3. ssr</a></li>
-<li><a href="#org2c67b0a">2.4. Other options</a></li>
+<li><a href="#org2f31e18">2.1. speed benchmark</a></li>
+<li><a href="#org10e6afe">2.2. bbr</a></li>
+<li><a href="#org1dceada">2.3. ssr</a></li>
+<li><a href="#orgd2f14b6">2.4. Other options</a></li>
 </ul>
 </li>
-<li><a href="#orga5d1f8a">3. Web server</a>
+<li><a href="#orgfddd994">3. Web server</a>
 <ul>
-<li><a href="#org7903861">3.1. http</a></li>
-<li><a href="#orgd26f3ed">3.2. domain name</a></li>
+<li><a href="#orgb066c28">3.1. http</a></li>
+<li><a href="#org3895c22">3.2. domain name</a></li>
 </ul>
 </li>
-<li><a href="#org22d966d">4. Mail server</a>
+<li><a href="#org246030b">4. Mail server</a>
 <ul>
-<li><a href="#org876867f">4.1. maildev</a></li>
+<li><a href="#org0d35dd7">4.1. maildev</a></li>
 </ul>
 </li>
-<li><a href="#orgb784bf1">5. Issues</a>
+<li><a href="#org2125fe4">5. Issues</a>
 <ul>
-<li><a href="#org9049d83">5.1. iptables</a></li>
+<li><a href="#orgcc37eca">5.1. iptables</a></li>
+<li><a href="#orgbb8f492">5.2. startup</a></li>
 </ul>
 </li>
 </ul>
@@ -368,8 +369,8 @@ What a VPS can do, actually it&apos;s out of my imagenation.
 <p>
 I got a really cheap and stable KVM vps on hosteons.com, and run shadowsocksR as the main job.
 </p>
-<div id="outline-container-org522d007" class="outline-2">
-<h2 id="org522d007"><span class="section-number-2">1</span> Basic</h2>
+<div id="outline-container-orgbde96a6" class="outline-2">
+<h2 id="orgbde96a6"><span class="section-number-2">1</span> Basic</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 ssh log in ubuntu 16, the vnc will encouter a template error with GUI.
@@ -391,57 +392,57 @@ ssh log in ubuntu 16, the vnc will encouter a template error with GUI.
 </div>
 </div>
 </div>
-<div id="outline-container-org84882be" class="outline-2">
-<h2 id="org84882be"><span class="section-number-2">2</span> SSR server</h2>
+<div id="outline-container-org3eec1c5" class="outline-2">
+<h2 id="org3eec1c5"><span class="section-number-2">2</span> SSR server</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orga0e5d05" class="outline-3">
-<h3 id="orga0e5d05"><span class="section-number-3">2.1</span> speed benchmark</h3>
+<div id="outline-container-org2f31e18" class="outline-3">
+<h3 id="org2f31e18"><span class="section-number-3">2.1</span> speed benchmark</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org28ee0aa" class="outline-3">
-<h3 id="org28ee0aa"><span class="section-number-3">2.2</span> bbr</h3>
+<div id="outline-container-org10e6afe" class="outline-3">
+<h3 id="org10e6afe"><span class="section-number-3">2.2</span> bbr</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## for ubuntu 18</span></span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br><span class="line">lsmod |grep <span class="string">&apos;bbr&apos;</span></span><br><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line"></span><br><span class="line"><span class="comment">## for ubuntu 16</span></span><br><span class="line">wget --no-check-certificate -qO <span class="string">&apos;BBR.sh&apos;</span> <span class="string">&apos;https://moeclub.org/attachment/LinuxShell/BBR.sh&apos;</span> &amp;&amp; chmod a+x BBR.sh &amp;&amp; bash BBR.sh -f</span><br><span class="line">wget --no-check-certificate -qO <span class="string">&apos;BBR_POWERED.sh&apos;</span> <span class="string">&apos;https://moeclub.org/attachment/LinuxShell/BBR_POWERED.sh&apos;</span> &amp;&amp; chmod a+x BBR_POWERED.sh &amp;&amp; bash BBR_POWERED.sh</span><br><span class="line">lsmod |grep <span class="string">&apos;bbr&apos;</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfa9d306" class="outline-3">
-<h3 id="orgfa9d306"><span class="section-number-3">2.3</span> ssr</h3>
+<div id="outline-container-org1dceada" class="outline-3">
+<h3 id="org1dceada"><span class="section-number-3">2.3</span> ssr</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ssr &amp;&amp; <span class="built_in">cd</span> ssr</span><br><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</span><br><span class="line">chmod +x shadowsocksR.sh</span><br><span class="line">./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</span><br><span class="line">reboot</span><br><span class="line"><span class="comment"># ./shadowsocksR.sh uninstall</span></span><br><span class="line">/etc/init.d/shadowsocks restart</span><br><span class="line">vi /etc/shadowsocks.json</span><br><span class="line"><span class="comment">## Check configuration</span></span><br><span class="line">{</span><br><span class="line">    <span class="string">&quot;server&quot;</span>:<span class="string">&quot;0.0.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;server_ipv6&quot;</span>:<span class="string">&quot;[::]&quot;</span>,</span><br><span class="line">    <span class="string">&quot;port_password&quot;</span>:{</span><br><span class="line">        <span class="string">&quot;8089&quot;</span>:<span class="string">&quot;your_pass&quot;</span>,</span><br><span class="line">        <span class="string">&quot;8090&quot;</span>:<span class="string">&quot;your_passwd&quot;</span>,</span><br><span class="line">        <span class="string">&quot;8091&quot;</span>:<span class="string">&quot;your_password&quot;</span></span><br><span class="line">        },</span><br><span class="line">    <span class="string">&quot;local_address&quot;</span>:<span class="string">&quot;127.0.0.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;local_port&quot;</span>:1080,</span><br><span class="line">    <span class="string">&quot;password&quot;</span>:<span class="string">&quot;your_pass&quot;</span>,</span><br><span class="line">    <span class="string">&quot;timeout&quot;</span>:120,</span><br><span class="line">    <span class="string">&quot;method&quot;</span>:<span class="string">&quot;encryption_method&quot;</span>,</span><br><span class="line">    <span class="string">&quot;protocol&quot;</span>:<span class="string">&quot;choose_proto&quot;</span>,</span><br><span class="line">    <span class="string">&quot;protocol_param&quot;</span>:<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;obfs&quot;</span>:<span class="string">&quot;plain&quot;</span>,</span><br><span class="line">    <span class="string">&quot;obfs_param&quot;</span>:<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;redirect&quot;</span>:<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dns_ipv6&quot;</span>:<span class="literal">false</span>,</span><br><span class="line">    <span class="string">&quot;fast_open&quot;</span>:<span class="literal">false</span>,</span><br><span class="line">    <span class="string">&quot;workers&quot;</span>:1</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org2c67b0a" class="outline-3">
-<h3 id="org2c67b0a"><span class="section-number-3">2.4</span> Other options</h3>
+<div id="outline-container-orgd2f14b6" class="outline-3">
+<h3 id="orgd2f14b6"><span class="section-number-3">2.4</span> Other options</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
-<div id="outline-container-org0a3dea4" class="outline-4">
-<h4 id="org0a3dea4">ss</h4>
-<div class="outline-text-4" id="text-org0a3dea4">
+<div id="outline-container-org629fb4a" class="outline-4">
+<h4 id="org629fb4a">ss</h4>
+<div class="outline-text-4" id="text-org629fb4a">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip install shadowsocks</span><br><span class="line">apt install shadowsocks</span><br><span class="line"><span class="comment">## Start service</span></span><br><span class="line">ssserver -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org2ae6005" class="outline-4">
-<h4 id="org2ae6005">local to vps</h4>
-<div class="outline-text-4" id="text-org2ae6005">
+<div id="outline-container-org3cdd1c9" class="outline-4">
+<h4 id="org3cdd1c9">local to vps</h4>
+<div class="outline-text-4" id="text-org3cdd1c9">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">apt-get install build-essential libtool libpcre3 libpcre3-dev zlib1g-dev openssl</span><br><span class="line"><span class="comment">### Auto install nginx</span></span><br><span class="line">apt install nginx</span><br><span class="line">ls /var/www/html</span><br><span class="line"><span class="comment">### Manual install newest nginx server</span></span><br><span class="line">wget http://nginx.org/download/nginx-1.15.5.tar.gz</span><br><span class="line">tar -zxvf nginx-1.15.5.tar.gz &amp;&amp; <span class="built_in">cd</span> nginx-1.15.5</span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">sudo /usr/<span class="built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line">ps -ef|grep nginx</span><br><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -V</span><br><span class="line">vi /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -s reload</span><br><span class="line"><span class="comment">### Stop nginx</span></span><br><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org5fb9d13" class="outline-4">
-<h4 id="org5fb9d13">streisand</h4>
-<div class="outline-text-4" id="text-org5fb9d13">
+<div id="outline-container-org2e8a641" class="outline-4">
+<h4 id="org2e8a641">streisand</h4>
+<div class="outline-text-4" id="text-org2e8a641">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">apt install python</span><br><span class="line">apt install git</span><br><span class="line"><span class="comment"># apt install python-pip python-pycurl python-dev build-essential python-paramiko</span></span><br><span class="line">apt install python-pip</span><br><span class="line">pip install ansible markupsafe</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/StreisandEffect/streisand.git &amp;&amp; <span class="built_in">cd</span> streisand</span><br><span class="line"><span class="built_in">export</span> LC_ALL=<span class="string">&quot;en_US.UTF-8&quot;</span></span><br><span class="line">./util/venv-dependencies.sh ./venv</span><br><span class="line"><span class="built_in">source</span> ./venv/bin/activate</span><br><span class="line">./streisand</span><br><span class="line"><span class="comment">### Linode and other famous vps should install another package or skip this</span></span><br><span class="line"><span class="comment">### I choose 7. localhost and default setting, and 8. Existing Server also is ok</span></span><br><span class="line"><span class="comment">### Then streisand will deploy successfully on Ubuntu 16 with root as default user</span></span><br><span class="line"><span class="comment">### Then default 5 accounts will be created.</span></span><br><span class="line">tar -czf streisand.tar.gz /root/streisand/generated-docs</span><br><span class="line">scp root@your_vps_ip:/root/streisand.tar.gz streisand.tar.gz</span><br><span class="line"><span class="comment">### Visit https://your_vps_ip with CA and password for user streisand.</span></span><br></pre></td></tr></table></figure>
 </div>
@@ -449,43 +450,43 @@ ssh log in ubuntu 16, the vnc will encouter a template error with GUI.
 </div>
 </div>
 </div>
-<div id="outline-container-orga5d1f8a" class="outline-2">
-<h2 id="orga5d1f8a"><span class="section-number-2">3</span> Web server</h2>
+<div id="outline-container-orgfddd994" class="outline-2">
+<h2 id="orgfddd994"><span class="section-number-2">3</span> Web server</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org7903861" class="outline-3">
-<h3 id="org7903861"><span class="section-number-3">3.1</span> http</h3>
+<div id="outline-container-orgb066c28" class="outline-3">
+<h3 id="orgb066c28"><span class="section-number-3">3.1</span> http</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org0604438" class="outline-4">
-<h4 id="org0604438">nginx</h4>
-<div class="outline-text-4" id="text-org0604438">
+<div id="outline-container-org65a4a5e" class="outline-4">
+<h4 id="org65a4a5e">nginx</h4>
+<div class="outline-text-4" id="text-org65a4a5e">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt install nginx</span><br><span class="line">ls /var/www/html</span><br><span class="line">nginx -v</span><br><span class="line">mv ~/test.pkg /var/www/html/</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbdc7753" class="outline-4">
-<h4 id="orgbdc7753">frp</h4>
-<div class="outline-text-4" id="text-orgbdc7753">
+<div id="outline-container-orgf64415c" class="outline-4">
+<h4 id="orgf64415c">frp</h4>
+<div class="outline-text-4" id="text-orgf64415c">
 </div>
 <ul class="org-ul">
-<li><a id="org887f2ee"></a>installation<br>
-<div class="outline-text-5" id="text-org887f2ee">
+<li><a id="orgc71c07a"></a>installation<br>
+<div class="outline-text-5" id="text-orgc71c07a">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PKG_VER=0.21.0</span><br><span class="line">PKG_ARCH=linux_amd64</span><br><span class="line">PKG_NAME=frp_$(PKG_VER)_$(PKG_ARCH)</span><br><span class="line">wget https://github.com/fatedier/frp/releases/download/v$(PKG_VER)/$(PKG_NAME).tar.gz</span><br><span class="line">tar -xzf $(PKG_NAME).tar.gz</span><br><span class="line"><span class="built_in">cd</span> $(PKG_NAME)</span><br><span class="line">PKG_PATH=$(PWD)/frps</span><br><span class="line">./frps -c ./frps.ini --reload</span><br><span class="line">sudo cat $(PKG_PATH) -c $(PKG_PATH).ini &amp; &gt;&gt; /etc/rc.local</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </li>
-<li><a id="orgeea301a"></a>frps startup<br>
-<div class="outline-text-5" id="text-orgeea301a">
+<li><a id="orgb26364f"></a>frps startup<br>
+<div class="outline-text-5" id="text-orgb26364f">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /lib/systemd/system/frps.service</span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description=frps service</span><br><span class="line">After=network.target syslog.target</span><br><span class="line">Wants=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">ExecStart=/root/frp/frps -c /root/frp/frps.ini</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line">scp 0x99-frps.service eula.fc:/lib/systemd/system/frps.service</span><br><span class="line">sudo systemctl start frps</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> frps</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </li>
-<li><a id="orgc81605d"></a>frps screen<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup><br>
-<div class="outline-text-5" id="text-orgc81605d">
+<li><a id="orgea3d25f"></a>frps screen<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup><br>
+<div class="outline-text-5" id="text-orgea3d25f">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">screen -S frp /root/frp/frps -c /root/frp/frps.ini</span><br><span class="line">ln -s /root/frp/frps /usr/bin/frps</span><br><span class="line">screen -S frp frps -c /root/frp/frps.ini</span><br></pre></td></tr></table></figure>
 </div>
@@ -502,15 +503,15 @@ The config file
 </div>
 </div>
 </li>
-<li><a id="org4f3fe82"></a>https<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup><br>
-<div class="outline-text-5" id="text-org4f3fe82">
+<li><a id="orgf5342fb"></a>https<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup><sup>, </sup><sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup><br>
+<div class="outline-text-5" id="text-orgf5342fb">
 <p>
 ssl &#x2013; let&apos;s encrypt
 </p>
 </div>
 </li>
-<li><a id="orgb633c92"></a>frp on openwrt<br>
-<div class="outline-text-5" id="text-orgb633c92">
+<li><a id="orgbb93e79"></a>frp on openwrt<br>
+<div class="outline-text-5" id="text-orgbb93e79">
 <p>
 Add to /etc/init.d/frpc
 </p>
@@ -519,8 +520,8 @@ Add to /etc/init.d/frpc
 </div>
 </div>
 <ul class="org-ul">
-<li><a id="org39e74dd"></a>original<br>
-<div class="outline-text-6" id="text-org39e74dd">
+<li><a id="org53a6f09"></a>original<br>
+<div class="outline-text-6" id="text-org53a6f09">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./tmp/frpc -c /root/frp/frpc.ini</span><br></pre></td></tr></table></figure>
 </div>
@@ -529,8 +530,8 @@ Add to /etc/init.d/frpc
 </div>
 </div>
 </li>
-<li><a id="org6d9cedd"></a>xfrp<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup><br>
-<div class="outline-text-6" id="text-org6d9cedd">
+<li><a id="orga767d7a"></a>xfrp<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup><br>
+<div class="outline-text-6" id="text-orga767d7a">
 <p>
 For Netgear 4300<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, and xfrpc only work with xfrps.
 </p>
@@ -543,21 +544,21 @@ For Netgear 4300<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, and
 </li>
 </ul>
 </div>
-<div id="outline-container-orge250069" class="outline-4">
-<h4 id="orge250069">npm</h4>
-<div class="outline-text-4" id="text-orge250069">
+<div id="outline-container-org2d46c7d" class="outline-4">
+<h4 id="org2d46c7d">npm</h4>
+<div class="outline-text-4" id="text-org2d46c7d">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -</span><br><span class="line">sudo apt install nodejs</span><br><span class="line">npm -v</span><br><span class="line">sudo node http_server.js</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-orge5e9160" class="outline-4">
-<h4 id="orge5e9160">docker<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup></h4>
-<div class="outline-text-4" id="text-orge5e9160">
+<div id="outline-container-orga1e3f63" class="outline-4">
+<h4 id="orga1e3f63">docker<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup></h4>
+<div class="outline-text-4" id="text-orga1e3f63">
 </div>
 <ul class="org-ul">
-<li><a id="org431d9aa"></a><a href="https://docs.docker.com/engine/reference/commandline" target="_blank" rel="noopener">docker usage</a><br>
-<div class="outline-text-5" id="text-org431d9aa">
+<li><a id="orgbb2e134"></a><a href="https://docs.docker.com/engine/reference/commandline" target="_blank" rel="noopener">docker usage</a><br>
+<div class="outline-text-5" id="text-orgbb2e134">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable&quot;</span></span><br><span class="line">sudo apt update</span><br><span class="line">apt-cache policy docker-ce</span><br><span class="line">sudo apt install docker-ce</span><br><span class="line">sudo systemctl status docker</span><br><span class="line">sudo apt install net-tools</span><br></pre></td></tr></table></figure>
 </div>
@@ -569,36 +570,36 @@ For Netgear 4300<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, and
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd26f3ed" class="outline-3">
-<h3 id="orgd26f3ed"><span class="section-number-3">3.2</span> domain name</h3>
+<div id="outline-container-org3895c22" class="outline-3">
+<h3 id="org3895c22"><span class="section-number-3">3.2</span> domain name</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Register a free domain name on <a href="https://my.freenom.com/" target="_blank" rel="noopener">freenom</a> and a china dnspod as nameserver according to <a href="https://www.jianshu.com/p/e02371079daa" target="_blank" rel="noopener">this</a>.
 </p>
 </div>
-<div id="outline-container-orgd29b804" class="outline-4">
-<h4 id="orgd29b804">freenom</h4>
-<div class="outline-text-4" id="text-orgd29b804">
+<div id="outline-container-org10b4ddd" class="outline-4">
+<h4 id="org10b4ddd">freenom</h4>
+<div class="outline-text-4" id="text-org10b4ddd">
 <p>
 You can register a free name for a long time.
 </p>
 </div>
 </div>
-<div id="outline-container-org423e52a" class="outline-4">
-<h4 id="org423e52a">dnspod<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup></h4>
+<div id="outline-container-orgad6414b" class="outline-4">
+<h4 id="orgad6414b">dnspod<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup></h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org22d966d" class="outline-2">
-<h2 id="org22d966d"><span class="section-number-2">4</span> Mail server</h2>
+<div id="outline-container-org246030b" class="outline-2">
+<h2 id="org246030b"><span class="section-number-2">4</span> Mail server</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Most vps has blocked port 25 in and out traffic, so check with <code>telnet IP port</code>. Out traffic of 25 can be transferred to other ports<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup>.
 </p>
 </div>
 
-<div id="outline-container-org876867f" class="outline-3">
-<h3 id="org876867f"><span class="section-number-3">4.1</span> maildev<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup></h3>
+<div id="outline-container-org0d35dd7" class="outline-3">
+<h3 id="org0d35dd7"><span class="section-number-3">4.1</span> maildev<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup></h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 docker or npm smtp test server, catch and send mail, webclient with password.
@@ -614,49 +615,49 @@ docker or npm smtp test server, catch and send mail, webclient with password.
 <a href="https://mxtoolbox.com/diagnostic.aspx" target="_blank" rel="noopener">Check with this site</a>
 </p>
 </div>
-<div id="outline-container-org4cfe1ec" class="outline-4">
-<h4 id="org4cfe1ec">forsaken<sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup></h4>
-<div class="outline-text-4" id="text-org4cfe1ec">
+<div id="outline-container-orgf11924a" class="outline-4">
+<h4 id="orgf11924a">forsaken<sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup></h4>
+<div class="outline-text-4" id="text-orgf11924a">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  docker run --name fmail -d -p 25:25 -p 3000:3000 denghongcai/forsaken-mail</span><br><span class="line"><span class="comment"># Or like this</span></span><br><span class="line">  docker run --name fomail -d -p 1025:25 -p 3000:3000 denghongcai/forsaken-mail</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
-<div id="outline-container-org49d991b" class="outline-4">
-<h4 id="org49d991b">iRedMail<sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup></h4>
-<div class="outline-text-4" id="text-org49d991b">
+<div id="outline-container-org17e827d" class="outline-4">
+<h4 id="org17e827d">iRedMail<sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup></h4>
+<div class="outline-text-4" id="text-org17e827d">
 <p>
 Open source serious server,
 </p>
 </div>
 </div>
-<div id="outline-container-orgb7bcada" class="outline-4">
-<h4 id="orgb7bcada">Modoboa<sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup></h4>
-<div class="outline-text-4" id="text-orgb7bcada">
+<div id="outline-container-orga780e83" class="outline-4">
+<h4 id="orga780e83">Modoboa<sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup></h4>
+<div class="outline-text-4" id="text-orga780e83">
 <p>
 Multi-function
 </p>
 </div>
 </div>
-<div id="outline-container-org85802b1" class="outline-4">
-<h4 id="org85802b1">mailinabox<sup><a id="fnr.13" class="footref" href="#fn.13">13</a></sup></h4>
-<div class="outline-text-4" id="text-org85802b1">
+<div id="outline-container-org2761254" class="outline-4">
+<h4 id="org2761254">mailinabox<sup><a id="fnr.13" class="footref" href="#fn.13">13</a></sup></h4>
+<div class="outline-text-4" id="text-org2761254">
 <p>
 Multi-function
 </p>
 </div>
 </div>
-<div id="outline-container-org183653a" class="outline-4">
-<h4 id="org183653a">Mailu<sup><a id="fnr.14" class="footref" href="#fn.14">14</a></sup></h4>
-<div class="outline-text-4" id="text-org183653a">
+<div id="outline-container-org8c4f7f2" class="outline-4">
+<h4 id="org8c4f7f2">Mailu<sup><a id="fnr.14" class="footref" href="#fn.14">14</a></sup></h4>
+<div class="outline-text-4" id="text-org8c4f7f2">
 <p>
 Serious server, need more than 2G total memory and 1G free memory.
 </p>
 </div>
 </div>
-<div id="outline-container-org6f552c6" class="outline-4">
-<h4 id="org6f552c6">mailslurper<sup><a id="fnr.15" class="footref" href="#fn.15">15</a></sup></h4>
-<div class="outline-text-4" id="text-org6f552c6">
+<div id="outline-container-org0fd4b39" class="outline-4">
+<h4 id="org0fd4b39">mailslurper<sup><a id="fnr.15" class="footref" href="#fn.15">15</a></sup></h4>
+<div class="outline-text-4" id="text-org0fd4b39">
 <p>
 Go compiled
 </p>
@@ -664,17 +665,17 @@ Go compiled
 </div>
 </div>
 </div>
-<div id="outline-container-orgb784bf1" class="outline-2">
-<h2 id="orgb784bf1"><span class="section-number-2">5</span> Issues</h2>
+<div id="outline-container-org2125fe4" class="outline-2">
+<h2 id="org2125fe4"><span class="section-number-2">5</span> Issues</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org9049d83" class="outline-3">
-<h3 id="org9049d83"><span class="section-number-3">5.1</span> iptables</h3>
+<div id="outline-container-orgcc37eca" class="outline-3">
+<h3 id="orgcc37eca"><span class="section-number-3">5.1</span> iptables</h3>
 <div class="outline-text-3" id="text-5-1">
 </div>
-<div id="outline-container-org6f56445" class="outline-4">
-<h4 id="org6f56445">clear all</h4>
-<div class="outline-text-4" id="text-org6f56445">
+<div id="outline-container-orgf7738b7" class="outline-4">
+<h4 id="orgf7738b7">clear all</h4>
+<div class="outline-text-4" id="text-orgf7738b7">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">iptables -P INPUT ACCEPT</span><br><span class="line">iptables -P FORWARD ACCEPT</span><br><span class="line">iptables -P OUTPUT ACCEPT</span><br><span class="line">iptables -t nat -F</span><br><span class="line">iptables -t mangle -F</span><br><span class="line">iptables -t raw -F</span><br><span class="line">iptables -F</span><br><span class="line">iptables -X</span><br><span class="line">iptables -nvL</span><br><span class="line"><span class="comment">### Maybe ip6tables needs clear</span></span><br><span class="line">ip6tables -P INPUT ACCEPT</span><br><span class="line">ip6tables -P FORWARD ACCEPT</span><br><span class="line">ip6tables -P OUTPUT ACCEPT</span><br><span class="line">ip6tables -t nat -F</span><br><span class="line">ip6tables -t mangle -F</span><br><span class="line">ip6tables -F</span><br><span class="line">ip6tables -X</span><br></pre></td></tr></table></figure>
 </div>
@@ -683,15 +684,38 @@ Go compiled
 </div>
 </div>
 </div>
-<div id="outline-container-org2506999" class="outline-4">
-<h4 id="org2506999"><span class="timestamp-wrapper"><span class="timestamp">[2018-11-15 Thu]</span></span></h4>
-<div class="outline-text-4" id="text-org2506999">
+<div id="outline-container-org53f0ae5" class="outline-4">
+<h4 id="org53f0ae5"><span class="timestamp-wrapper"><span class="timestamp">[2018-11-15 Thu]</span></span></h4>
+<div class="outline-text-4" id="text-org53f0ae5">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">root@eula:~<span class="comment"># iptables -L -n -v</span></span><br><span class="line">Chain INPUT (policy ACCEPT 138 packets, 11707 bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain FORWARD (policy DROP 0 packets, 0 bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">  131  943K DOCKER-USER  all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line">  131  943K DOCKER-ISOLATION-STAGE-1  all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line">   95  941K ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED</span><br><span class="line">    0     0 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">   36  2116 ACCEPT     all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">    0     0 ACCEPT     all  --  docker0 docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain OUTPUT (policy ACCEPT 7 packets, 700 bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">    0     0 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:3000</span><br><span class="line">    0     0 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:25</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-1 (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">   36  2116 DOCKER-ISOLATION-STAGE-2  all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">  131  943K RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-2 (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">    0     0 DROP       all  --  *      docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">   36  2116 RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-USER (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">  131  943K RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line">root@eula:~<span class="comment"># netstat -anpt</span></span><br><span class="line">Active Internet connections (servers and established)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      255/systemd-resolve</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      440/sshd</span><br><span class="line">tcp        0      0 your_vps_ip:55313      172.217.14.78:443       ESTABLISHED 499/python</span><br><span class="line">tcp        0    376 your_vps_ip:22         14.16.103.178:61552     ESTABLISHED 707/sshd: root@pts/</span><br><span class="line">tcp        0      0 your_vps_ip:45507      74.125.197.188:443      ESTABLISHED 499/python</span><br><span class="line">tcp6       0      0 :::22                   :::*                    LISTEN      440/sshd</span><br><span class="line">tcp6       0      0 :::3000                 :::*                    LISTEN      806/docker-proxy</span><br><span class="line">tcp6       0      0 :::25                   :::*                    LISTEN      818/docker-proxy</span><br><span class="line">tcp6       0      0 :::8089                 :::*                    LISTEN      499/python</span><br><span class="line">tcp6       0      0 your_vps_ip:8089       14.16.103.178:61655     ESTABLISHED 499/python</span><br><span class="line">tcp6       0      0 your_vps_ip:8089       14.16.103.178:61596     ESTABLISHED 499/python</span><br></pre></td></tr></table></figure>
 </div>
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">root@eula:~<span class="comment"># iptables -L -n -v</span></span><br><span class="line">Chain INPUT (policy ACCEPT 2444 packets, 579K bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain FORWARD (policy DROP 165 packets, 9880 bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain OUTPUT (policy ACCEPT 1050 packets, 495K bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER (0 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">    0     0 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:3000</span><br><span class="line">    0     0 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:25</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-1 (0 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-2 (0 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER-USER (0 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">root@eula:~<span class="comment"># iptables-</span></span><br><span class="line">iptables-apply    iptables-restore  iptables-save     iptables-xml</span><br><span class="line">root@eula:~<span class="comment"># iptables-</span></span><br><span class="line">iptables-apply    iptables-restore  iptables-save     iptables-xml</span><br><span class="line">root@eula:~<span class="comment"># iptables-</span></span><br><span class="line">iptables-apply    iptables-restore  iptables-save     iptables-xml</span><br><span class="line">root@eula:~<span class="comment"># iptables-save</span></span><br><span class="line"><span class="comment"># Generated by iptables-save v1.6.1 on Thu Nov 15 06:30:12 2018</span></span><br><span class="line">*nat</span><br><span class="line">:PREROUTING ACCEPT [1712:142062]</span><br><span class="line">:INPUT ACCEPT [115:20353]</span><br><span class="line">:OUTPUT ACCEPT [32:7256]</span><br><span class="line">:POSTROUTING ACCEPT [32:7256]</span><br><span class="line">:DOCKER - [0:0]</span><br><span class="line">-A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER</span><br><span class="line">-A OUTPUT ! -d 127.0.0.0/8 -m addrtype --dst-type LOCAL -j DOCKER</span><br><span class="line">-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE</span><br><span class="line">-A POSTROUTING -s 172.17.0.2/32 -d 172.17.0.2/32 -p tcp -m tcp --dport 3000 -j MASQUERADE</span><br><span class="line">-A POSTROUTING -s 172.17.0.2/32 -d 172.17.0.2/32 -p tcp -m tcp --dport 25 -j MASQUERADE</span><br><span class="line">-A DOCKER -i docker0 -j RETURN</span><br><span class="line">-A DOCKER ! -i docker0 -p tcp -m tcp --dport 3000 -j DNAT --to-destination 172.17.0.2:3000</span><br><span class="line">-A DOCKER ! -i docker0 -p tcp -m tcp --dport 25 -j DNAT --to-destination 172.17.0.2:25</span><br><span class="line">COMMIT</span><br><span class="line"><span class="comment"># Completed on Thu Nov 15 06:30:12 2018</span></span><br><span class="line"><span class="comment"># Generated by iptables-save v1.6.1 on Thu Nov 15 06:30:12 2018</span></span><br><span class="line">*filter</span><br><span class="line">:INPUT ACCEPT [2754:615656]</span><br><span class="line">:FORWARD DROP [175:10504]</span><br><span class="line">:OUTPUT ACCEPT [1141:520115]</span><br><span class="line">:DOCKER - [0:0]</span><br><span class="line">:DOCKER-ISOLATION-STAGE-1 - [0:0]</span><br><span class="line">:DOCKER-ISOLATION-STAGE-2 - [0:0]</span><br><span class="line">:DOCKER-USER - [0:0]</span><br><span class="line">-A DOCKER -d 172.17.0.2/32 ! -i docker0 -o docker0 -p tcp -m tcp --dport 3000 -j ACCEPT</span><br><span class="line">-A DOCKER -d 172.17.0.2/32 ! -i docker0 -o docker0 -p tcp -m tcp --dport 25 -j ACCEPT</span><br><span class="line">COMMIT</span><br><span class="line"><span class="comment"># Completed on Thu Nov 15 06:30:12 2018</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root@eula:~<span class="comment"># iptables -L -n</span></span><br><span class="line">Chain INPUT (policy ACCEPT)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain FORWARD (policy DROP)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line">DOCKER-USER  all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">DOCKER-ISOLATION-STAGE-1  all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED</span><br><span class="line">DOCKER     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain OUTPUT (policy ACCEPT)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER (1 references)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line">ACCEPT     tcp  --  0.0.0.0/0            172.17.0.2           tcp dpt:3000</span><br><span class="line">ACCEPT     tcp  --  0.0.0.0/0            172.17.0.2           tcp dpt:25</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-1 (1 references)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line">DOCKER-ISOLATION-STAGE-2  all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">RETURN     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-2 (1 references)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line">DROP       all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">RETURN     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-USER (1 references)</span><br><span class="line">target     prot opt <span class="built_in">source</span>               destination</span><br><span class="line">RETURN     all  --  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">root@eula:~<span class="comment"># iptables -L -n -v</span></span><br><span class="line">Chain INPUT (policy ACCEPT 1714 packets, 385K bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain FORWARD (policy DROP 0 packets, 0 bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">  205  955K DOCKER-USER  all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line">  205  955K DOCKER-ISOLATION-STAGE-1  all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line">  133  949K ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED</span><br><span class="line">    4   256 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">   68  6427 ACCEPT     all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">    0     0 ACCEPT     all  --  docker0 docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain OUTPUT (policy ACCEPT 885 packets, 326K bytes)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line"></span><br><span class="line">Chain DOCKER (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">    4   256 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:3000</span><br><span class="line">    0     0 ACCEPT     tcp  --  !docker0 docker0  0.0.0.0/0            172.17.0.2           tcp dpt:25</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-1 (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">   68  6427 DOCKER-ISOLATION-STAGE-2  all  --  docker0 !docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">  205  955K RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-ISOLATION-STAGE-2 (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">    0     0 DROP       all  --  *      docker0  0.0.0.0/0            0.0.0.0/0</span><br><span class="line">   68  6427 RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br><span class="line"></span><br><span class="line">Chain DOCKER-USER (1 references)</span><br><span class="line"> pkts bytes target     prot opt <span class="keyword">in</span>     out     <span class="built_in">source</span>               destination</span><br><span class="line">  205  955K RETURN     all  --  *      *       0.0.0.0/0            0.0.0.0/0</span><br></pre></td></tr></table></figure>
 </div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb8f492" class="outline-3">
+<h3 id="orgbb8f492"><span class="section-number-3">5.2</span> startup</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Ubuntu 18.04 LTS support systemctl and cannot edit <b>rc.local</b> directly to config startup.
+</p>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/systemd/system/rc-local.service</span><br><span class="line"><span class="comment">### Add this section in rc-local.service</span></span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/rc.local</span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/sh -e</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rc.local</span></span><br><span class="line">./frps -c frps.ini &amp;</span><br><span class="line">maildev -s 25 -w 8080 &amp;</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+</div>
+<div class="org-src-container">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/rc.local</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> rc-local</span><br><span class="line">sudo systemctl start rc-local.service</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
