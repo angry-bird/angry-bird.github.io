@@ -115,6 +115,8 @@
 				    
 				    <li><a href="/categories/python3/" class="animsition-link">python3<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/reverse-engineer/" class="animsition-link">reverse-engineer<small>(1)</small></a></li>
+				    
 				    <li><a href="/categories/runner/" class="animsition-link">runner<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webserver/" class="animsition-link">webserver<small>(1)</small></a></li>
@@ -147,6 +149,8 @@
 				    
 				    <li><a href="/tags/crawler/" class="animsition-link">crawler<small>(1)</small></a></li>
 				    
+				    <li><a href="/tags/disassembler/" class="animsition-link">disassembler<small>(1)</small></a></li>
+				    
 				    <li><a href="/tags/emacs/" class="animsition-link">emacs<small>(3)</small></a></li>
 				    
 				    <li><a href="/tags/ffmpeg/" class="animsition-link">ffmpeg<small>(1)</small></a></li>
@@ -158,6 +162,8 @@
 				    <li><a href="/tags/hackintosh/" class="animsition-link">hackintosh<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/hexo/" class="animsition-link">hexo<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/ida/" class="animsition-link">ida<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/js/" class="animsition-link">js<small>(1)</small></a></li>
 				    
@@ -193,7 +199,11 @@
 				    
 				    <li><a href="/tags/python3/" class="animsition-link">python3<small>(2)</small></a></li>
 				    
+				    <li><a href="/tags/r2/" class="animsition-link">r2<small>(1)</small></a></li>
+				    
 				    <li><a href="/tags/rar/" class="animsition-link">rar<small>(1)</small></a></li>
+				    
+				    <li><a href="/tags/reverse-engineer/" class="animsition-link">reverse-engineer<small>(1)</small></a></li>
 				    
 				    <li><a href="/tags/rime/" class="animsition-link">rime<small>(1)</small></a></li>
 				    
@@ -338,6 +348,59 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/01/22/radare2/">Disassembler</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-01-22T00:00:00.000Z" itemprop="datePublished">
+          2019-01-22
+      </time>
+    
+    
+    | 
+    <a href="/tags/disassembler/">disassembler</a>,
+    
+    <a href="/tags/r2/">r2</a>,
+    
+    <a href="/tags/ida/">ida</a>,
+    
+    <a href="/tags/reverse-engineer/">reverse-engineer</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgabae6ce">1. Radare2&#xA0;&#xA0;&#xA0;<span class="tag"><span class="r2">r2</span>&#xA0;<span class="cutter">cutter</span></span></a></li>
+<li><a href="#orgfbdb6ab">2. Interactive Disassembler&#xA0;&#xA0;&#xA0;<span class="tag"><span class="IDA">IDA</span></span></a></li>
+<li><a href="#orgdeeabd1">3. WinDebug</a></li>
+<li><a href="#org895d65f">4. ninja</a></li>
+<li><a href="#org0c7951a">5. OllDbg&#xA0;&#xA0;&#xA0;<span class="tag"><span class="32bit">32bit</span></span></a></li>
+</ul>
+</div>
+</div>
+                      
+                    </div></p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/01/22/radare2/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -664,71 +727,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/11/18/hackintosh on thinkpad T440P/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/31/openwrt on wndr4300/">openwrt on wndr4300</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-31T00:00:00.000Z" itemprop="datePublished">
-          2018-10-31
-      </time>
-    
-    
-    | 
-    <a href="/tags/linux/">linux</a>,
-    
-    <a href="/tags/openwrt/">openwrt</a>,
-    
-    <a href="/tags/netgear/">netgear</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org49553f7">1. Prep</a></li>
-<li><a href="#orgdae4aad">2. Image Release</a></li>
-<li><a href="#orgf95dcb1">3. Signal Strength</a></li>
-<li><a href="#org737ed7c">4. Packages</a>
-<ul>
-<li><a href="#org872068a">4.1. usb storage</a></li>
-<li><a href="#org5c01837">4.2. koolproxy</a></li>
-<li><a href="#orgbed0b79">4.3. frp</a></li>
-<li><a href="#org3fd5870">4.4. shadowsocksR</a></li>
-<li><a href="#org2555285">4.5. aria2</a></li>
-</ul>
-</li>
-<li><a href="#orgd6a88aa">5. Compile with SDK</a>
-<ul>
-<li><a href="#org3b09bfe">5.1. prepare</a></li>
-<li><a href="#org3620ffa">5.2. shadowsocksR-libev for OpenWrt</a></li>
-<li><a href="#orgc110d86">5.3. aria2</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-                      
-                    </div></p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/31/openwrt on wndr4300/">Read More...</a>
                     </p>
                     
                 </div>
